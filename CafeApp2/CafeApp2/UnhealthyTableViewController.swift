@@ -108,7 +108,7 @@ class UnhealthyTableViewController: UITableViewController {
         let price = String(unhealthy[indexPath!.row].price)
         
         
-        let viewController = segue.destination as! ViewController
+        let viewController = segue.destination as! UnhealthyViewController
         viewController.testText = food + "\n Description: " + description + "\n Price " + price
         
         // Get the new view controller using segue.destinationViewController.

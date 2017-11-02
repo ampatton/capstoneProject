@@ -9,10 +9,18 @@
 import UIKit
 
 class HealthyViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var testTextLabel: UILabel!
+    
+    var testText = "blank"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        testTextLabel?.text = testText
 
+        
         // Do any additional setup after loading the view.
     }
 
