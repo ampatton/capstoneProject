@@ -19,7 +19,8 @@ class MenuItem {
     init (name: String, description: String, image: UIImage, price: Double){
         self.name = name
         self.description = description
-        self.image = image
+        self.image = UIImage()
         self.price = price
     }
+    
 }

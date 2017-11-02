@@ -10,10 +10,13 @@ import UIKit
 
 class HealthyTableViewController: UITableViewController {
 
-    var healthy = ["Salad", "Grilled Chicken", "Grapefruit"]
+    var healthy = Array<MenuItem>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var healthyItem1 = MenuItem(name: "pancakes", description: "Light and fluffy", image: UIImage(), price: 9)
+        
+        healthy.append(healthyItem1)
         
 
         // Uncomment the following line to preserve selection between presentations
@@ -44,7 +47,9 @@ class HealthyTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "healthyMenuChoiceCell", for: indexPath)
         
-        cell.textLabel?.text = healthy[indexPath.row]
+        var priceDoubleConversion = String(healthy[indexPath.row].price)
+        
+        cell.textLabel?.text = "Name: " + healthy[indexPath.row].name + "\n Description: " + healthy[indexPath.row].description + "\n Price: " + priceDoubleConversion
         return cell
     }
 

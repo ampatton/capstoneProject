@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D51A356B1FABD1A5001B0668 /* HealthyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A356A1FABD1A5001B0668 /* HealthyViewController.swift */; };
 		D541F5281FA2B1BF001F2343 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D541F5271FA2B1BF001F2343 /* AppDelegate.swift */; };
 		D541F52A1FA2B1BF001F2343 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D541F5291FA2B1BF001F2343 /* ViewController.swift */; };
 		D541F52D1FA2B1BF001F2343 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D541F52B1FA2B1BF001F2343 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D51A356A1FABD1A5001B0668 /* HealthyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyViewController.swift; sourceTree = "<group>"; };
 		D541F5241FA2B1BF001F2343 /* CafeApp2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafeApp2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D541F5271FA2B1BF001F2343 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D541F5291FA2B1BF001F2343 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				D541F5331FA2B1BF001F2343 /* LaunchScreen.storyboard */,
 				D541F5361FA2B1BF001F2343 /* Info.plist */,
 				D541F52E1FA2B1BF001F2343 /* CafeApp2.xcdatamodeld */,
+				D51A356A1FABD1A5001B0668 /* HealthyViewController.swift */,
 			);
 			path = CafeApp2;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				D541F5591FA2B295001F2343 /* HealthyTableViewController.swift in Sources */,
 				D541F55D1FA2DAE5001F2343 /* MenuItem.swift in Sources */,
 				D541F5281FA2B1BF001F2343 /* AppDelegate.swift in Sources */,
+				D51A356B1FABD1A5001B0668 /* HealthyViewController.swift in Sources */,
 				D541F55B1FA2D926001F2343 /* UnhealthyTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
