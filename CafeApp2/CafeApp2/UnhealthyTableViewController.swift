@@ -21,7 +21,7 @@ class UnhealthyTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var unhealthyItem1 = MenuItem(name: "pancakes", description: "Light and fluffy", image: UIImage(), price: 9)
+        var unhealthyItem1 = MenuItem(name: "pancakes", description: "Light and fluffy", image: UIImage(), price: 9.99)
         
         
         
@@ -109,7 +109,12 @@ class UnhealthyTableViewController: UITableViewController {
         
         
         let viewController = segue.destination as! UnhealthyViewController
-        viewController.testText = food + "\n Description: " + description + "\n Price " + price
+        viewController.testText = food + "\n Description: " + description// + "\n Price " + price
+        
+        viewController.testFood = food
+        viewController.testDescription = description
+        viewController.testPrice = price
+        
         
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.

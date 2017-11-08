@@ -12,14 +12,21 @@ class UnhealthyViewController: UIViewController {
 
     @IBOutlet weak var testTextLabel: UILabel!
     
+    @IBOutlet weak var testTextButton: UIButton!
     
     
     var testText = "wrong text"
+    
+    var testFood = "Wrong  food"
+    var testDescription = "Wrong description"
+    var testPrice = "Wrong price"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
          testTextLabel?.text = testText
+        testTextButton.setTitle(testPrice, for: .normal) 
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
