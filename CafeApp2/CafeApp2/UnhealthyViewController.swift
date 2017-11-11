@@ -25,7 +25,9 @@ class UnhealthyViewController: UIViewController {
         super.viewDidLoad()
         
          testTextLabel?.text = testText
-        testTextButton.setTitle(testPrice, for: .normal) 
+        testTextButton.setTitle(testPrice, for: .normal)
+        
+        self.title = "Menu Item Display"
         
         // Do any additional setup after loading the view, typically from a nib.
     }

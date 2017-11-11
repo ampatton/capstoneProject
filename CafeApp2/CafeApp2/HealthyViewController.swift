@@ -19,7 +19,7 @@ class HealthyViewController: UIViewController {
         super.viewDidLoad()
         
         testTextLabel?.text = testText
-
+        self.title = "Menu Item Display"
         
         // Do any additional setup after loading the view.
     }

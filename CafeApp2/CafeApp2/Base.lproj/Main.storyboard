@@ -192,9 +192,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPl-yI-3HK">
-                                <rect key="frame" x="155" y="424" width="65" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPl-yI-3HK">
+                                <rect key="frame" x="172.5" y="487" width="30" height="30"/>
                                 <state key="normal" title="Buy"/>
                                 <connections>
                                     <segue destination="Rc1-Gu-pEc" kind="show" id="4Kg-Bw-dBk"/>
@@ -202,6 +201,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yPl-yI-3HK" firstAttribute="centerX" secondItem="viW-O0-ZiV" secondAttribute="centerX" id="fcX-VW-ZcK"/>
+                            <constraint firstItem="viW-O0-ZiV" firstAttribute="bottom" secondItem="yPl-yI-3HK" secondAttribute="bottom" constant="150" id="rZA-j4-N8o"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="viW-O0-ZiV"/>
                     </view>
                     <connections>
@@ -213,10 +216,10 @@
             </objects>
             <point key="canvasLocation" x="2660" y="339.58020989505252"/>
         </scene>
-        <!--View Controller-->
+        <!--Survey View Controller-->
         <scene sceneID="38T-FO-T0G">
             <objects>
-                <viewController id="Rc1-Gu-pEc" sceneMemberID="viewController">
+                <viewController id="Rc1-Gu-pEc" customClass="SurveyViewController" customModule="CafeApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w63-rK-5B0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -264,18 +267,26 @@
                                 <rect key="frame" x="23" y="287" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46w-Oq-TBA">
-                                <rect key="frame" x="163" y="580" width="49" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46w-Oq-TBA">
+                                <rect key="frame" x="163" y="577" width="49" height="30"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
+                                    <action selector="submitButtonPressed:" destination="Rc1-Gu-pEc" eventType="touchUpInside" id="L23-uO-dUY"/>
                                     <segue destination="pzv-ei-f3Y" kind="show" id="QUj-MF-cCi"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="46w-Oq-TBA" firstAttribute="centerX" secondItem="ECs-Zp-hnE" secondAttribute="centerX" id="SAn-oA-BaV"/>
+                            <constraint firstItem="ECs-Zp-hnE" firstAttribute="bottom" secondItem="46w-Oq-TBA" secondAttribute="bottom" constant="60" id="ZT8-a9-fhQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ECs-Zp-hnE"/>
                     </view>
+                    <connections>
+                        <outlet property="satisfactionButton" destination="FIf-v6-E0R" id="Qe2-ZU-ek2"/>
+                        <outlet property="timeButton" destination="yi0-jZ-aRU" id="SwO-dz-f4l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZwW-SQ-0YM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -296,8 +307,8 @@
                                     <segue destination="HBJ-Jd-ZB7" kind="show" id="t1M-Zy-EGj"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Thank you for your response! Please hit the done button below to return to the home screen." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xda-1E-CTx">
-                                <rect key="frame" x="7" y="232" width="368" height="70"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for your response! Please hit the done button below to return to the home screen." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xda-1E-CTx">
+                                <rect key="frame" x="8" y="324.5" width="359" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -306,9 +317,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hhG-qo-r4Z" firstAttribute="bottom" secondItem="5R7-AJ-Q4c" secondAttribute="bottom" constant="127" id="NJW-6t-4RA"/>
-                            <constraint firstItem="xda-1E-CTx" firstAttribute="centerX" secondItem="hhG-qo-r4Z" secondAttribute="centerX" id="VFQ-D0-uYx"/>
-                            <constraint firstItem="5R7-AJ-Q4c" firstAttribute="centerX" secondItem="hhG-qo-r4Z" secondAttribute="centerX" id="ZFc-Wc-Y2H"/>
+                            <constraint firstItem="xda-1E-CTx" firstAttribute="leading" secondItem="hhG-qo-r4Z" secondAttribute="leading" constant="8" id="TaB-Yj-aH3"/>
+                            <constraint firstItem="xda-1E-CTx" firstAttribute="trailing" secondItem="hhG-qo-r4Z" secondAttribute="trailing" constant="-8" id="iG8-2P-Df2"/>
                             <constraint firstItem="xda-1E-CTx" firstAttribute="centerY" secondItem="hhG-qo-r4Z" secondAttribute="centerY" id="mRo-58-plc"/>
+                            <constraint firstItem="5R7-AJ-Q4c" firstAttribute="centerX" secondItem="hhG-qo-r4Z" secondAttribute="centerX" id="qav-U2-yhb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hhG-qo-r4Z"/>
                     </view>
@@ -355,6 +367,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="QUj-MF-cCi"/>
         <segue reference="t1M-Zy-EGj"/>
     </inferredMetricsTieBreakers>
 </document>

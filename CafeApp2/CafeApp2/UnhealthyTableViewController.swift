@@ -22,7 +22,7 @@ class UnhealthyTableViewController: UITableViewController {
         super.viewDidLoad()
         
         var unhealthyItem1 = MenuItem(name: "pancakes", description: "Light and fluffy", image: UIImage(), price: 9.99)
-        
+        self.title = "Cafe at Eckles Menu"
         
         
         unhealthy.append(unhealthyItem1)

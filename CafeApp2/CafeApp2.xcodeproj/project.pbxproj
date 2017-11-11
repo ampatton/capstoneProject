@@ -19,6 +19,8 @@
 		D541F5591FA2B295001F2343 /* HealthyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D541F5581FA2B295001F2343 /* HealthyTableViewController.swift */; };
 		D541F55B1FA2D926001F2343 /* UnhealthyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D541F55A1FA2D926001F2343 /* UnhealthyTableViewController.swift */; };
 		D541F55D1FA2DAE5001F2343 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D541F55C1FA2DAE5001F2343 /* MenuItem.swift */; };
+		D563A04B1FB4EF5500B240C7 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D563A04A1FB4EF5500B240C7 /* SurveyViewController.swift */; };
+		D563A04D1FB4FB7D00B240C7 /* SurveyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D563A04C1FB4FB7D00B240C7 /* SurveyItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		D541F5581FA2B295001F2343 /* HealthyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyTableViewController.swift; sourceTree = "<group>"; };
 		D541F55A1FA2D926001F2343 /* UnhealthyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnhealthyTableViewController.swift; sourceTree = "<group>"; };
 		D541F55C1FA2DAE5001F2343 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		D563A04A1FB4EF5500B240C7 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
+		D563A04C1FB4FB7D00B240C7 /* SurveyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 				D541F5361FA2B1BF001F2343 /* Info.plist */,
 				D541F52E1FA2B1BF001F2343 /* CafeApp2.xcdatamodeld */,
 				D51A356A1FABD1A5001B0668 /* HealthyViewController.swift */,
+				D563A04A1FB4EF5500B240C7 /* SurveyViewController.swift */,
+				D563A04C1FB4FB7D00B240C7 /* SurveyItem.swift */,
 			);
 			path = CafeApp2;
 			sourceTree = "<group>";
@@ -275,7 +281,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D541F52A1FA2B1BF001F2343 /* UnhealthyViewController.swift in Sources */,
+				D563A04D1FB4FB7D00B240C7 /* SurveyItem.swift in Sources */,
 				D541F5301FA2B1BF001F2343 /* CafeApp2.xcdatamodeld in Sources */,
+				D563A04B1FB4EF5500B240C7 /* SurveyViewController.swift in Sources */,
 				D541F5591FA2B295001F2343 /* HealthyTableViewController.swift in Sources */,
 				D541F55D1FA2DAE5001F2343 /* MenuItem.swift in Sources */,
 				D541F5281FA2B1BF001F2343 /* AppDelegate.swift in Sources */,
