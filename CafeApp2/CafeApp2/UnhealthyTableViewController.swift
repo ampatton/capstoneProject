@@ -10,23 +10,20 @@ import UIKit
 
 class unhealthyMenuCell: UITableViewCell{
     
-    @IBOutlet weak var foodNameLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
-    
+    @IBOutlet weak var unhealthyTextView: UITextView!
     
 }
 
 class UnhealthyTableViewController: UITableViewController {
 
-    
-    var unhealthyItem1 = MenuItem(name: "pancakes", description: "Light and fluffy", image: UIImage(), price: 9.99, timeStore: 0)
         var unhealthy = Array<MenuItem>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var unhealthyItem1 = MenuItem(name: "pancakes", description: "Light and fluffy", image: UIImage(), price: 9.99, timeStore: 0)
+        var unhealthyItem1 = MenuItem(name: "pancakes", description: "Light and fluffy", image: UIImage(), price: 9.99)
         self.title = "Cafe at Eckles Menu"
+        
         
         unhealthy.append(unhealthyItem1)
 
@@ -60,8 +57,9 @@ class UnhealthyTableViewController: UITableViewController {
         
         let priceDoubleConversion = String(unhealthy[indexPath.row].price)
         
-        cell.foodNameLabel.text = unhealthyItem1.name
-        cell.priceLabel.text = priceDoubleConversion
+        cell.unhealthyTextView?.text = "Name: " + unhealthy[indexPath.row].name + "\nDescription: " + unhealthy[indexPath.row].description + "\n Price: " + priceDoubleConversion
+        
+        cell.unhealthyTextView.isEditable = false
         
         return cell
     }
@@ -113,11 +111,9 @@ class UnhealthyTableViewController: UITableViewController {
         let viewController = segue.destination as! UnhealthyViewController
         viewController.testText = food + "\n Description: " + description// + "\n Price " + price
         
-        //viewController.testFood = food    --Uncomment if you need these for text labels instead of one text field--
-        //viewController.testDescription = description
+        viewController.testFood = food
+        viewController.testDescription = description
         viewController.testPrice = price
-        
-        viewController.unhealthyItem1 = unhealthyItem1
         
         
         // Get the new view controller using segue.destinationViewController.

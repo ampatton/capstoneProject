@@ -21,7 +21,7 @@ class HealthyTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var healthyItem1 = MenuItem(name: "pancakes", description: "Light and fluffy", image: UIImage(), price: 9, timeStore: 0)
+        var healthyItem1 = MenuItem(name: "pancakes", description: "Light and fluffy", image: UIImage(), price: 9)
         self.title = "Cafe at Eckles Menu"
         healthy.append(healthyItem1)
         
