@@ -10,18 +10,22 @@ import UIKit
 
 class unhealthyMenuCell: UITableViewCell{
     
-    @IBOutlet weak var unhealthyTextView: UITextView!
+    @IBOutlet weak var foodNameLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    
     
 }
 
 class UnhealthyTableViewController: UITableViewController {
 
+    
+    var unhealthyItem1 = MenuItem(name: "pancakes", description: "Light and fluffy", image: UIImage(), price: 9.99, timeStore: 0)
         var unhealthy = Array<MenuItem>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var unhealthyItem1 = MenuItem(name: "pancakes", description: "Light and fluffy", image: UIImage(), price: 9.99)
+        var unhealthyItem1 = MenuItem(name: "pancakes", description: "Light and fluffy", image: UIImage(), price: 9.99, timeStore: 0)
         self.title = "Cafe at Eckles Menu"
         
         
@@ -57,9 +61,8 @@ class UnhealthyTableViewController: UITableViewController {
         
         let priceDoubleConversion = String(unhealthy[indexPath.row].price)
         
-        cell.unhealthyTextView?.text = "Name: " + unhealthy[indexPath.row].name + "\nDescription: " + unhealthy[indexPath.row].description + "\n Price: " + priceDoubleConversion
-        
-        cell.unhealthyTextView.isEditable = false
+        cell.foodNameLabel.text = unhealthyItem1.name
+        cell.priceLabel.text = priceDoubleConversion
         
         return cell
     }

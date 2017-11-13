@@ -21,8 +21,17 @@ class UnhealthyViewController: UIViewController {
     var testDescription = "Wrong description"
     var testPrice = "Wrong price"
     
+    @IBOutlet weak var timerLabelTest: UILabel!
+    
+    var seconds = 0
+    var timer = Timer()
+    var isTimeRunning = true
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        runTimer()
         
          testTextLabel?.text = testText
         testTextButton.setTitle(testPrice, for: .normal)
@@ -36,7 +45,17 @@ class UnhealthyViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    @objc func updateTimer() {
+        seconds += 1
+        timerLabelTest.text = "\(seconds)"
+    }
+    
+    func runTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(UnhealthyViewController.updateTimer)), userInfo: nil, repeats: true)
+    }
+    
+    
 
 }
 
