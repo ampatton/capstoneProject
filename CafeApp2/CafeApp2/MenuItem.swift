@@ -16,11 +16,15 @@ class MenuItem {
     var image = UIImage()
     var price = Double()
     
-    init (name: String, description: String, image: UIImage, price: Double){
+    var timeStore = Int()
+    
+    init (name: String, description: String, image: UIImage, price: Double, timeStore: Int){
         self.name = name
         self.description = description
         self.image = UIImage()
         self.price = price
+        self.timeStore = timeStore
+        
     }
     
 }
