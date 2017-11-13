@@ -18,15 +18,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXr-0I-gvC">
-                                <rect key="frame" x="110.5" y="437" width="154" height="30"/>
-                                <state key="normal" title="Unhealthy Menu Items"/>
+                                <rect key="frame" x="112.5" y="437" width="151" height="30"/>
+                                <state key="normal" title="Menu without calories"/>
                                 <connections>
                                     <segue destination="c5W-3A-n22" kind="show" id="Wr1-XI-ypb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jn-q3-Ghy">
-                                <rect key="frame" x="119" y="220" width="137" height="30"/>
-                                <state key="normal" title="Healthy Menu Items"/>
+                                <rect key="frame" x="123" y="220" width="129" height="30"/>
+                                <state key="normal" title="Menu with calories"/>
                                 <connections>
                                     <segue destination="tvm-Ws-mB4" kind="show" id="jFo-4X-Hkf"/>
                                 </connections>
@@ -199,10 +199,17 @@
                                     <segue destination="Rc1-Gu-pEc" kind="show" id="4Kg-Bw-dBk"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g78-7l-T5J">
+                                <rect key="frame" x="24" y="616" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="yPl-yI-3HK" firstAttribute="centerX" secondItem="viW-O0-ZiV" secondAttribute="centerX" id="fcX-VW-ZcK"/>
+                            <constraint firstItem="viW-O0-ZiV" firstAttribute="bottom" secondItem="g78-7l-T5J" secondAttribute="bottom" constant="30" id="iZd-2E-BrN"/>
                             <constraint firstItem="viW-O0-ZiV" firstAttribute="bottom" secondItem="yPl-yI-3HK" secondAttribute="bottom" constant="150" id="rZA-j4-N8o"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="viW-O0-ZiV"/>
@@ -210,6 +217,7 @@
                     <connections>
                         <outlet property="testTextButton" destination="yPl-yI-3HK" id="L8V-7j-kxc"/>
                         <outlet property="testTextLabel" destination="TqE-dp-7Vk" id="5UR-ff-QGN"/>
+                        <outlet property="timerLabelTest" destination="g78-7l-T5J" id="m1H-eQ-H78"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C6u-1O-7Pd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -367,7 +375,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hz7-b5-Vq4"/>
+        <segue reference="4Kg-Bw-dBk"/>
         <segue reference="t1M-Zy-EGj"/>
     </inferredMetricsTieBreakers>
 </document>

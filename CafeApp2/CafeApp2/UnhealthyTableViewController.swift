@@ -17,11 +17,10 @@ class unhealthyMenuCell: UITableViewCell{
 class UnhealthyTableViewController: UITableViewController {
 
         var unhealthy = Array<MenuItem>()
+        var unhealthyItem1 = MenuItem(name: "pancakes", description: "Light and fluffy", image: UIImage(), price: 9.99, timeStore: 999)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        var unhealthyItem1 = MenuItem(name: "pancakes", description: "Light and fluffy", image: UIImage(), price: 9.99)
         self.title = "Cafe at Eckles Menu"
         
         
@@ -111,13 +110,15 @@ class UnhealthyTableViewController: UITableViewController {
         let viewController = segue.destination as! UnhealthyViewController
         viewController.testText = food + "\n Description: " + description// + "\n Price " + price
         
-        viewController.testFood = food
-        viewController.testDescription = description
+        //viewController.testFood = food    --Uncomment if you need these for text labels instead of one text field--
+        //viewController.testDescription = description
         viewController.testPrice = price
+        
+        viewController.unhealthyItem1 = unhealthyItem1
         
         
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-
+    
 }
