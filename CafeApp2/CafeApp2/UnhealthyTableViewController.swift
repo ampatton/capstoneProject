@@ -28,7 +28,6 @@ class UnhealthyTableViewController: UITableViewController {
         var unhealthyItem1 = MenuItem(name: "pancakes", description: "Light and fluffy", image: UIImage(), price: 9.99, timeStore: 0)
         self.title = "Cafe at Eckles Menu"
         
-        
         unhealthy.append(unhealthyItem1)
 
         // Uncomment the following line to preserve selection between presentations
@@ -114,9 +113,11 @@ class UnhealthyTableViewController: UITableViewController {
         let viewController = segue.destination as! UnhealthyViewController
         viewController.testText = food + "\n Description: " + description// + "\n Price " + price
         
-        viewController.testFood = food
-        viewController.testDescription = description
+        //viewController.testFood = food    --Uncomment if you need these for text labels instead of one text field--
+        //viewController.testDescription = description
         viewController.testPrice = price
+        
+        viewController.unhealthyItem1 = unhealthyItem1
         
         
         // Get the new view controller using segue.destinationViewController.
