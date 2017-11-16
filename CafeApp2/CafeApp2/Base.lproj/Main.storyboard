@@ -250,13 +250,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="(type text here)" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lcm-PH-g57">
-                                <rect key="frame" x="67" y="444" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter any comments you have about the food below:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1h9-sK-F9L">
                                 <rect key="frame" x="16" y="407" width="396" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -283,6 +276,13 @@
                                     <segue destination="pzv-ei-f3Y" kind="show" id="QUj-MF-cCi"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter text here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TcX-Og-tMo">
+                                <rect key="frame" x="68" y="493" width="202" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -293,6 +293,7 @@
                     </view>
                     <connections>
                         <outlet property="satisfactionButton" destination="FIf-v6-E0R" id="Qe2-ZU-ek2"/>
+                        <outlet property="textField" destination="TcX-Og-tMo" id="uNd-ya-aWJ"/>
                         <outlet property="timeButton" destination="yi0-jZ-aRU" id="SwO-dz-f4l"/>
                     </connections>
                 </viewController>
@@ -375,7 +376,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4Kg-Bw-dBk"/>
+        <segue reference="QUj-MF-cCi"/>
         <segue reference="t1M-Zy-EGj"/>
     </inferredMetricsTieBreakers>
 </document>

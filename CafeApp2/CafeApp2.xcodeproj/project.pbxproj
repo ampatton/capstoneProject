@@ -21,6 +21,7 @@
 		D541F55D1FA2DAE5001F2343 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D541F55C1FA2DAE5001F2343 /* MenuItem.swift */; };
 		D563A04B1FB4EF5500B240C7 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D563A04A1FB4EF5500B240C7 /* SurveyViewController.swift */; };
 		D563A04D1FB4FB7D00B240C7 /* SurveyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D563A04C1FB4FB7D00B240C7 /* SurveyItem.swift */; };
+		D57A6DDB1FBB4D500099190D /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = D57A6DDA1FBB4D500099190D /* GoogleService-Info (1).plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		D541F55C1FA2DAE5001F2343 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		D563A04A1FB4EF5500B240C7 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		D563A04C1FB4FB7D00B240C7 /* SurveyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyItem.swift; sourceTree = "<group>"; };
+		D57A6DDA1FBB4D500099190D /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info (1).plist"; path = "../../../../Downloads/GoogleService-Info (1).plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				D541F5311FA2B1BF001F2343 /* Assets.xcassets */,
 				D541F5331FA2B1BF001F2343 /* LaunchScreen.storyboard */,
 				D541F5361FA2B1BF001F2343 /* Info.plist */,
+				D57A6DDA1FBB4D500099190D /* GoogleService-Info (1).plist */,
 				D541F52E1FA2B1BF001F2343 /* CafeApp2.xcdatamodeld */,
 				D51A356A1FABD1A5001B0668 /* HealthyViewController.swift */,
 				D563A04A1FB4EF5500B240C7 /* SurveyViewController.swift */,
@@ -256,6 +259,7 @@
 				D541F5351FA2B1BF001F2343 /* LaunchScreen.storyboard in Resources */,
 				D541F5321FA2B1BF001F2343 /* Assets.xcassets in Resources */,
 				D541F52D1FA2B1BF001F2343 /* Main.storyboard in Resources */,
+				D57A6DDB1FBB4D500099190D /* GoogleService-Info (1).plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

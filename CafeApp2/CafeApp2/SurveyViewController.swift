@@ -8,12 +8,14 @@
 
 import UIKit
 
-class SurveyViewController: UIViewController {
+class SurveyViewController: UIViewController, UITextFieldDelegate {
     var surveyResult = SurveyItem(satisfaction: false, timelyManner: false, comments: "Invalid")
 
     @IBOutlet weak var satisfactionButton: UISwitch!
     
     @IBOutlet weak var timeButton: UISwitch!
+    
+    @IBOutlet weak var textField: UITextField!
     
     @IBAction func submitButtonPressed(_ sender: Any) {
         if (timeButton.isOn == true){
@@ -37,8 +39,16 @@ class SurveyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Survey"
+        textField.delegate = self
         
         // Do any additional setup after loading the view.
+    }
+
+    
+    func textFieldShouldReturn(_ textView: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
     }
 
     override func didReceiveMemoryWarning() {
