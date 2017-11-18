@@ -7,13 +7,25 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
+
+class unhealthyMenuCell: UITableViewCell{
+    
+    @IBOutlet weak var unhealthyTextView: UITextView!
+}
 
 class UnhealthyTableViewController: UITableViewController {
 
-        var unhealthy = ["Hot Wings", "Chocolate Cake", "Lobster Mac N Cheese"]
+        var unhealthy = Array<MenuItem>()
+        var unhealthyItem1 = MenuItem(name: "pancakes", description: "Light and fluffy", image: UIImage(), price: 9.99, timeStore: 999)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Cafe at Eckles Menu"
+        
+        
+        unhealthy.append(unhealthyItem1)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -39,11 +51,25 @@ class UnhealthyTableViewController: UITableViewController {
         return unhealthy.count
     }
     
+    func post(){
+        let title = "Swift Title"
+        let message = "Message"
+        let post : [String : AnyObject] = ["title" : title as AnyObject, "message" : message as AnyObject]
+        
+        let databaseRef = Database.database().reference()
+        
+        databaseRef.child("Posts").childByAutoId().setValue(post)
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "unhealthyMenuChoiceCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "unhealthyMenuChoiceCell", for: indexPath) as! unhealthyMenuCell
         
-        cell.textLabel?.text = unhealthy[indexPath.row]
+        let priceDoubleConversion = String(unhealthy[indexPath.row].price)
+        
+        cell.unhealthyTextView?.text = "Name: " + unhealthy[indexPath.row].name + "\nDescription: " + unhealthy[indexPath.row].description + "\n Price: " + priceDoubleConversion
+        
+        cell.unhealthyTextView.isEditable = false
+        
         return cell
     }
 
@@ -82,14 +108,27 @@ class UnhealthyTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        let indexPath = self.tableView.indexPath(for: cell)
+        
+        let food = unhealthy[indexPath!.row].name
+        let description = unhealthy[indexPath!.row].description
+        let price = String(unhealthy[indexPath!.row].price)
+        
+        
+        let viewController = segue.destination as! UnhealthyViewController
+        viewController.testText = food + "\n Description: " + description// + "\n Price " + price
+        
+        //viewController.testFood = food    --Uncomment if you need these for text labels instead of one text field--
+        //viewController.testDescription = description
+        viewController.testPrice = price
+        
+        viewController.unhealthyItem1 = unhealthyItem1
+        
+        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
-
+    
 }

@@ -8,12 +8,22 @@
 
 import UIKit
 
+class healthyMenuCell: UITableViewCell{
+    
+    @IBOutlet weak var healthyTextView: UITextView!
+    
+    
+}
+
 class HealthyTableViewController: UITableViewController {
 
-    var healthy = ["Salad", "Grilled Chicken", "Grapefruit"]
+    var healthy = Array<MenuItem>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var healthyItem1 = MenuItem(name: "pancakes", description: "Light and fluffy", image: UIImage(), price: 9, timeStore: 0)
+        self.title = "Cafe at Eckles Menu"
+        healthy.append(healthyItem1)
         
 
         // Uncomment the following line to preserve selection between presentations
@@ -42,9 +52,13 @@ class HealthyTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "healthyMenuChoiceCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "healthyMenuChoiceCell", for: indexPath) as! healthyMenuCell
         
-        cell.textLabel?.text = healthy[indexPath.row]
+        var priceDoubleConversion = String(healthy[indexPath.row].price)
+
+         cell.healthyTextView.isEditable = false
+        
+        cell.healthyTextView?.text = "Name: " + healthy[indexPath.row].name + "\n Description: " + healthy[indexPath.row].description + "\n Price: " + priceDoubleConversion
         return cell
     }
 
@@ -83,14 +97,25 @@ class HealthyTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let cell = sender as! UITableViewCell
+        let indexPath = self.tableView.indexPath(for: cell)
+        
+        let food = healthy[indexPath!.row].name
+        let description = healthy[indexPath!.row].description
+        let price = String(healthy[indexPath!.row].price)
+        
+        
+        let viewController = segue.destination as! HealthyViewController
+        viewController.testText = food + "\n Description: " + description + "\n Price " + price
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

@@ -10,8 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var testTextLabel: UILabel!
+    
+    
+    
+    var testText = "wrong text"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+         testTextLabel?.text = testText
         // Do any additional setup after loading the view, typically from a nib.
     }
 
