@@ -1,0 +1,811 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D3FE6802E560DF6E5A4253A /* Pods_CafeApp2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7179DEFC0685AB36333F73E /* Pods_CafeApp2UITests.framework */; };
+		D51A356B1FABD1A5001B0668 /* HealthyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A356A1FABD1A5001B0668 /* HealthyViewController.swift */; };
+		D541F5281FA2B1BF001F2343 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D541F5271FA2B1BF001F2343 /* AppDelegate.swift */; };
+		D541F52A1FA2B1BF001F2343 /* UnhealthyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D541F5291FA2B1BF001F2343 /* UnhealthyViewController.swift */; };
+		D541F52D1FA2B1BF001F2343 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D541F52B1FA2B1BF001F2343 /* Main.storyboard */; };
+		D541F5301FA2B1BF001F2343 /* CafeApp2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D541F52E1FA2B1BF001F2343 /* CafeApp2.xcdatamodeld */; };
+		D541F5321FA2B1BF001F2343 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D541F5311FA2B1BF001F2343 /* Assets.xcassets */; };
+		D541F5351FA2B1BF001F2343 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D541F5331FA2B1BF001F2343 /* LaunchScreen.storyboard */; };
+		D541F5401FA2B1BF001F2343 /* CafeApp2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D541F53F1FA2B1BF001F2343 /* CafeApp2Tests.swift */; };
+		D541F54B1FA2B1BF001F2343 /* CafeApp2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D541F54A1FA2B1BF001F2343 /* CafeApp2UITests.swift */; };
+		D541F5591FA2B295001F2343 /* HealthyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D541F5581FA2B295001F2343 /* HealthyTableViewController.swift */; };
+		D541F55B1FA2D926001F2343 /* UnhealthyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D541F55A1FA2D926001F2343 /* UnhealthyTableViewController.swift */; };
+		D541F55D1FA2DAE5001F2343 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D541F55C1FA2DAE5001F2343 /* MenuItem.swift */; };
+		D563A04B1FB4EF5500B240C7 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D563A04A1FB4EF5500B240C7 /* SurveyViewController.swift */; };
+		D563A04D1FB4FB7D00B240C7 /* SurveyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D563A04C1FB4FB7D00B240C7 /* SurveyItem.swift */; };
+		D57A6DDF1FBE60000099190D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D57A6DDE1FBE60000099190D /* GoogleService-Info.plist */; };
+		FB0AFE00EF1A1D1E072ACB64 /* Pods_CafeApp2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1CF5D9D5EB05A1020D2937 /* Pods_CafeApp2Tests.framework */; };
+		FBF72E83D170D353D0E45D71 /* Pods_CafeApp2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FB244C59BD2296422930C3 /* Pods_CafeApp2.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D541F53C1FA2B1BF001F2343 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D541F51C1FA2B1BF001F2343 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D541F5231FA2B1BF001F2343;
+			remoteInfo = CafeApp2;
+		};
+		D541F5471FA2B1BF001F2343 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D541F51C1FA2B1BF001F2343 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D541F5231FA2B1BF001F2343;
+			remoteInfo = CafeApp2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		053B8327AAEBC82932DE7D6F /* Pods-CafeApp2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeApp2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CafeApp2Tests/Pods-CafeApp2Tests.release.xcconfig"; sourceTree = "<group>"; };
+		0566CFE61ECA847E98AEE271 /* Pods-CafeApp2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeApp2.release.xcconfig"; path = "Pods/Target Support Files/Pods-CafeApp2/Pods-CafeApp2.release.xcconfig"; sourceTree = "<group>"; };
+		06071B68D81B835CBEE339DE /* Pods-CafeApp2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeApp2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CafeApp2/Pods-CafeApp2.debug.xcconfig"; sourceTree = "<group>"; };
+		939B28FFE5D290EA7D36C730 /* Pods-CafeApp2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeApp2UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CafeApp2UITests/Pods-CafeApp2UITests.release.xcconfig"; sourceTree = "<group>"; };
+		C3FB244C59BD2296422930C3 /* Pods_CafeApp2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CafeApp2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D51A356A1FABD1A5001B0668 /* HealthyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyViewController.swift; sourceTree = "<group>"; };
+		D541F5241FA2B1BF001F2343 /* CafeApp2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafeApp2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D541F5271FA2B1BF001F2343 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D541F5291FA2B1BF001F2343 /* UnhealthyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnhealthyViewController.swift; sourceTree = "<group>"; };
+		D541F52C1FA2B1BF001F2343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D541F52F1FA2B1BF001F2343 /* CafeApp2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CafeApp2.xcdatamodel; sourceTree = "<group>"; };
+		D541F5311FA2B1BF001F2343 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D541F5341FA2B1BF001F2343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D541F5361FA2B1BF001F2343 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D541F53B1FA2B1BF001F2343 /* CafeApp2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CafeApp2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D541F53F1FA2B1BF001F2343 /* CafeApp2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeApp2Tests.swift; sourceTree = "<group>"; };
+		D541F5411FA2B1BF001F2343 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D541F5461FA2B1BF001F2343 /* CafeApp2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CafeApp2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D541F54A1FA2B1BF001F2343 /* CafeApp2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeApp2UITests.swift; sourceTree = "<group>"; };
+		D541F54C1FA2B1BF001F2343 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D541F5581FA2B295001F2343 /* HealthyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyTableViewController.swift; sourceTree = "<group>"; };
+		D541F55A1FA2D926001F2343 /* UnhealthyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnhealthyTableViewController.swift; sourceTree = "<group>"; };
+		D541F55C1FA2DAE5001F2343 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		D563A04A1FB4EF5500B240C7 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
+		D563A04C1FB4FB7D00B240C7 /* SurveyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyItem.swift; sourceTree = "<group>"; };
+		D57A6DDE1FBE60000099190D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D7A1D236F5FEF34B46641BA3 /* Pods-CafeApp2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeApp2UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CafeApp2UITests/Pods-CafeApp2UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA1CF5D9D5EB05A1020D2937 /* Pods_CafeApp2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CafeApp2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7179DEFC0685AB36333F73E /* Pods_CafeApp2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CafeApp2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F55B3D461F666D52B6475325 /* Pods-CafeApp2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeApp2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CafeApp2Tests/Pods-CafeApp2Tests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D541F5211FA2B1BF001F2343 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBF72E83D170D353D0E45D71 /* Pods_CafeApp2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D541F5381FA2B1BF001F2343 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB0AFE00EF1A1D1E072ACB64 /* Pods_CafeApp2Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D541F5431FA2B1BF001F2343 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D3FE6802E560DF6E5A4253A /* Pods_CafeApp2UITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		21775AC3E2419C0B5564A45A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				06071B68D81B835CBEE339DE /* Pods-CafeApp2.debug.xcconfig */,
+				0566CFE61ECA847E98AEE271 /* Pods-CafeApp2.release.xcconfig */,
+				F55B3D461F666D52B6475325 /* Pods-CafeApp2Tests.debug.xcconfig */,
+				053B8327AAEBC82932DE7D6F /* Pods-CafeApp2Tests.release.xcconfig */,
+				D7A1D236F5FEF34B46641BA3 /* Pods-CafeApp2UITests.debug.xcconfig */,
+				939B28FFE5D290EA7D36C730 /* Pods-CafeApp2UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BABC88D449B0B97989604C3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3FB244C59BD2296422930C3 /* Pods_CafeApp2.framework */,
+				DA1CF5D9D5EB05A1020D2937 /* Pods_CafeApp2Tests.framework */,
+				E7179DEFC0685AB36333F73E /* Pods_CafeApp2UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D541F51B1FA2B1BF001F2343 = {
+			isa = PBXGroup;
+			children = (
+				D541F5261FA2B1BF001F2343 /* CafeApp2 */,
+				D541F53E1FA2B1BF001F2343 /* CafeApp2Tests */,
+				D541F5491FA2B1BF001F2343 /* CafeApp2UITests */,
+				D541F5251FA2B1BF001F2343 /* Products */,
+				21775AC3E2419C0B5564A45A /* Pods */,
+				BABC88D449B0B97989604C3C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D541F5251FA2B1BF001F2343 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D541F5241FA2B1BF001F2343 /* CafeApp2.app */,
+				D541F53B1FA2B1BF001F2343 /* CafeApp2Tests.xctest */,
+				D541F5461FA2B1BF001F2343 /* CafeApp2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D541F5261FA2B1BF001F2343 /* CafeApp2 */ = {
+			isa = PBXGroup;
+			children = (
+				D541F5271FA2B1BF001F2343 /* AppDelegate.swift */,
+				D541F5291FA2B1BF001F2343 /* UnhealthyViewController.swift */,
+				D541F55A1FA2D926001F2343 /* UnhealthyTableViewController.swift */,
+				D541F5581FA2B295001F2343 /* HealthyTableViewController.swift */,
+				D541F55C1FA2DAE5001F2343 /* MenuItem.swift */,
+				D541F52B1FA2B1BF001F2343 /* Main.storyboard */,
+				D541F5311FA2B1BF001F2343 /* Assets.xcassets */,
+				D541F5331FA2B1BF001F2343 /* LaunchScreen.storyboard */,
+				D541F5361FA2B1BF001F2343 /* Info.plist */,
+				D57A6DDE1FBE60000099190D /* GoogleService-Info.plist */,
+				D541F52E1FA2B1BF001F2343 /* CafeApp2.xcdatamodeld */,
+				D51A356A1FABD1A5001B0668 /* HealthyViewController.swift */,
+				D563A04A1FB4EF5500B240C7 /* SurveyViewController.swift */,
+				D563A04C1FB4FB7D00B240C7 /* SurveyItem.swift */,
+			);
+			path = CafeApp2;
+			sourceTree = "<group>";
+		};
+		D541F53E1FA2B1BF001F2343 /* CafeApp2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D541F53F1FA2B1BF001F2343 /* CafeApp2Tests.swift */,
+				D541F5411FA2B1BF001F2343 /* Info.plist */,
+			);
+			path = CafeApp2Tests;
+			sourceTree = "<group>";
+		};
+		D541F5491FA2B1BF001F2343 /* CafeApp2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				D541F54A1FA2B1BF001F2343 /* CafeApp2UITests.swift */,
+				D541F54C1FA2B1BF001F2343 /* Info.plist */,
+			);
+			path = CafeApp2UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D541F5231FA2B1BF001F2343 /* CafeApp2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D541F54F1FA2B1BF001F2343 /* Build configuration list for PBXNativeTarget "CafeApp2" */;
+			buildPhases = (
+				31A32AA2919FD4EFA3789434 /* [CP] Check Pods Manifest.lock */,
+				D541F5201FA2B1BF001F2343 /* Sources */,
+				D541F5211FA2B1BF001F2343 /* Frameworks */,
+				D541F5221FA2B1BF001F2343 /* Resources */,
+				1DD756A3670836F94F654FA6 /* [CP] Embed Pods Frameworks */,
+				330430B985ECBD0F521ECD8B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CafeApp2;
+			productName = CafeApp2;
+			productReference = D541F5241FA2B1BF001F2343 /* CafeApp2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D541F53A1FA2B1BF001F2343 /* CafeApp2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D541F5521FA2B1BF001F2343 /* Build configuration list for PBXNativeTarget "CafeApp2Tests" */;
+			buildPhases = (
+				0E0E3EA91ABF1819CE07C56A /* [CP] Check Pods Manifest.lock */,
+				D541F5371FA2B1BF001F2343 /* Sources */,
+				D541F5381FA2B1BF001F2343 /* Frameworks */,
+				D541F5391FA2B1BF001F2343 /* Resources */,
+				8C756431D6CDD095C54F4187 /* [CP] Embed Pods Frameworks */,
+				932444A35A31413FEBA9C6F8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D541F53D1FA2B1BF001F2343 /* PBXTargetDependency */,
+			);
+			name = CafeApp2Tests;
+			productName = CafeApp2Tests;
+			productReference = D541F53B1FA2B1BF001F2343 /* CafeApp2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D541F5451FA2B1BF001F2343 /* CafeApp2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D541F5551FA2B1BF001F2343 /* Build configuration list for PBXNativeTarget "CafeApp2UITests" */;
+			buildPhases = (
+				F852075B367739E4236C60AF /* [CP] Check Pods Manifest.lock */,
+				D541F5421FA2B1BF001F2343 /* Sources */,
+				D541F5431FA2B1BF001F2343 /* Frameworks */,
+				D541F5441FA2B1BF001F2343 /* Resources */,
+				2AE1FD5229015E5A97DF3881 /* [CP] Embed Pods Frameworks */,
+				45F474D6DE350B18E69246D0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D541F5481FA2B1BF001F2343 /* PBXTargetDependency */,
+			);
+			name = CafeApp2UITests;
+			productName = CafeApp2UITests;
+			productReference = D541F5461FA2B1BF001F2343 /* CafeApp2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D541F51C1FA2B1BF001F2343 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Austin Patton";
+				TargetAttributes = {
+					D541F5231FA2B1BF001F2343 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+					};
+					D541F53A1FA2B1BF001F2343 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D541F5231FA2B1BF001F2343;
+					};
+					D541F5451FA2B1BF001F2343 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D541F5231FA2B1BF001F2343;
+					};
+				};
+			};
+			buildConfigurationList = D541F51F1FA2B1BF001F2343 /* Build configuration list for PBXProject "CafeApp2" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D541F51B1FA2B1BF001F2343;
+			productRefGroup = D541F5251FA2B1BF001F2343 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D541F5231FA2B1BF001F2343 /* CafeApp2 */,
+				D541F53A1FA2B1BF001F2343 /* CafeApp2Tests */,
+				D541F5451FA2B1BF001F2343 /* CafeApp2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D541F5221FA2B1BF001F2343 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D541F5351FA2B1BF001F2343 /* LaunchScreen.storyboard in Resources */,
+				D57A6DDF1FBE60000099190D /* GoogleService-Info.plist in Resources */,
+				D541F5321FA2B1BF001F2343 /* Assets.xcassets in Resources */,
+				D541F52D1FA2B1BF001F2343 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D541F5391FA2B1BF001F2343 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D541F5441FA2B1BF001F2343 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E0E3EA91ABF1819CE07C56A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CafeApp2Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1DD756A3670836F94F654FA6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CafeApp2/Pods-CafeApp2-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CafeApp2/Pods-CafeApp2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2AE1FD5229015E5A97DF3881 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CafeApp2UITests/Pods-CafeApp2UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31A32AA2919FD4EFA3789434 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CafeApp2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		330430B985ECBD0F521ECD8B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CafeApp2/Pods-CafeApp2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45F474D6DE350B18E69246D0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CafeApp2UITests/Pods-CafeApp2UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C756431D6CDD095C54F4187 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CafeApp2Tests/Pods-CafeApp2Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		932444A35A31413FEBA9C6F8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CafeApp2Tests/Pods-CafeApp2Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F852075B367739E4236C60AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CafeApp2UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D541F5201FA2B1BF001F2343 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D541F52A1FA2B1BF001F2343 /* UnhealthyViewController.swift in Sources */,
+				D563A04D1FB4FB7D00B240C7 /* SurveyItem.swift in Sources */,
+				D541F5301FA2B1BF001F2343 /* CafeApp2.xcdatamodeld in Sources */,
+				D563A04B1FB4EF5500B240C7 /* SurveyViewController.swift in Sources */,
+				D541F5591FA2B295001F2343 /* HealthyTableViewController.swift in Sources */,
+				D541F55D1FA2DAE5001F2343 /* MenuItem.swift in Sources */,
+				D541F5281FA2B1BF001F2343 /* AppDelegate.swift in Sources */,
+				D51A356B1FABD1A5001B0668 /* HealthyViewController.swift in Sources */,
+				D541F55B1FA2D926001F2343 /* UnhealthyTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D541F5371FA2B1BF001F2343 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D541F5401FA2B1BF001F2343 /* CafeApp2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D541F5421FA2B1BF001F2343 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D541F54B1FA2B1BF001F2343 /* CafeApp2UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D541F53D1FA2B1BF001F2343 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D541F5231FA2B1BF001F2343 /* CafeApp2 */;
+			targetProxy = D541F53C1FA2B1BF001F2343 /* PBXContainerItemProxy */;
+		};
+		D541F5481FA2B1BF001F2343 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D541F5231FA2B1BF001F2343 /* CafeApp2 */;
+			targetProxy = D541F5471FA2B1BF001F2343 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D541F52B1FA2B1BF001F2343 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D541F52C1FA2B1BF001F2343 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D541F5331FA2B1BF001F2343 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D541F5341FA2B1BF001F2343 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D541F54D1FA2B1BF001F2343 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D541F54E1FA2B1BF001F2343 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D541F5501FA2B1BF001F2343 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06071B68D81B835CBEE339DE /* Pods-CafeApp2.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CafeApp2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cap.CafeApp2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D541F5511FA2B1BF001F2343 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0566CFE61ECA847E98AEE271 /* Pods-CafeApp2.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CafeApp2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cap.CafeApp2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D541F5531FA2B1BF001F2343 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F55B3D461F666D52B6475325 /* Pods-CafeApp2Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CafeApp2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cap.CafeApp2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CafeApp2.app/CafeApp2";
+			};
+			name = Debug;
+		};
+		D541F5541FA2B1BF001F2343 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 053B8327AAEBC82932DE7D6F /* Pods-CafeApp2Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CafeApp2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cap.CafeApp2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CafeApp2.app/CafeApp2";
+			};
+			name = Release;
+		};
+		D541F5561FA2B1BF001F2343 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7A1D236F5FEF34B46641BA3 /* Pods-CafeApp2UITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CafeApp2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cap.CafeApp2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CafeApp2;
+			};
+			name = Debug;
+		};
+		D541F5571FA2B1BF001F2343 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 939B28FFE5D290EA7D36C730 /* Pods-CafeApp2UITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CafeApp2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cap.CafeApp2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CafeApp2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D541F51F1FA2B1BF001F2343 /* Build configuration list for PBXProject "CafeApp2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D541F54D1FA2B1BF001F2343 /* Debug */,
+				D541F54E1FA2B1BF001F2343 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D541F54F1FA2B1BF001F2343 /* Build configuration list for PBXNativeTarget "CafeApp2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D541F5501FA2B1BF001F2343 /* Debug */,
+				D541F5511FA2B1BF001F2343 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D541F5521FA2B1BF001F2343 /* Build configuration list for PBXNativeTarget "CafeApp2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D541F5531FA2B1BF001F2343 /* Debug */,
+				D541F5541FA2B1BF001F2343 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D541F5551FA2B1BF001F2343 /* Build configuration list for PBXNativeTarget "CafeApp2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D541F5561FA2B1BF001F2343 /* Debug */,
+				D541F5571FA2B1BF001F2343 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D541F52E1FA2B1BF001F2343 /* CafeApp2.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D541F52F1FA2B1BF001F2343 /* CafeApp2.xcdatamodel */,
+			);
+			currentVersion = D541F52F1FA2B1BF001F2343 /* CafeApp2.xcdatamodel */;
+			path = CafeApp2.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D541F51C1FA2B1BF001F2343 /* Project object */;
+}
