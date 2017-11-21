@@ -62,6 +62,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <tableView key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4lX-PZ-6DC">
+                            <rect key="frame" x="0.0" y="72" width="375" height="304"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tableView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="healthyMenuChoiceCell" id="n1k-wa-L2L" customClass="healthyMenuCell" customModule="CafeApp2" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -100,7 +105,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6s-Mj-m5Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1710" y="-366"/>
+            <point key="canvasLocation" x="1709.5999999999999" y="-366.56671664167919"/>
         </scene>
         <!--Healthy View Controller-->
         <scene sceneID="LZ5-69-ORj">
@@ -376,7 +381,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QUj-MF-cCi"/>
         <segue reference="t1M-Zy-EGj"/>
     </inferredMetricsTieBreakers>
 </document>
