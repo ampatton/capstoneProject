@@ -45,20 +45,24 @@ class HealthyTableViewController: UITableViewController {
         ref = Database.database().reference()
         
         //retrieve the posts and listen for changes
-        databaseHandle = ref?.child("menu_items").child("Drinks").child("coffee").observe(.value, with: { (snapshot) in
+        ref?.child("menu_items").child("Drinks").child("coffee").observeSingleEvent(of: .value, with: { (snapshot) in
         
             //Code to execute when a child is added under "Posts"
             //Take the value from the snapshot and added it to the postData array
             print (snapshot)
             
-            self.menu.append(snapshot.value as! MenuItem)
+            //let name = snapshot.value!["name"] as! String
+            //let price = snapshot.value!["price"] as! Float
+            
+            //self.posts.insert(drinkStruct(name: name, price: price) , atIndex:0)
+            
+            //let name = snapshot.value?["name"] as? String ?? ""
+            
+            //self.menu.append(snapshot.value as! MenuItem)
             
             
             })
-            //let name = snapshot.value!["name"] as! String
-            //let price = snapshot.value!["price"] as! Float
         
-            //self.posts.insert(drinkStruct(name: name, price: price) , atIndex:0)
         
             /*if let actualPost = postHere {
             self.postData.append(actualPost)
@@ -113,7 +117,7 @@ class HealthyTableViewController: UITableViewController {
         
         //return postData.count
         
-        return menu.count
+     //menu.count
         
         return healthy.count
     }
