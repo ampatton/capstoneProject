@@ -28,12 +28,12 @@ class newHealthViewController : UITableViewController {
         
         ref = Database.database().reference()
         
-        ref?.child("menu_items").child("Drinks").child("coffee").observeSingleEvent(of: .value, with: {(snapshot) in
+        ref?.child("menu_items").child("Drinks").child("Coffee").observeSingleEvent(of: .value, with: {(snapshot) in
             print (snapshot)
             //let name = snapshot.value!["name"]
             let dict = snapshot.value as? NSDictionary, name = dict!["name"] as? String, price = dict!["price"] as? Float
             
-            
+            //print (dict)
             
             self.drinks.insert(drinkStruct(name: name, price: price ), at: 0)
             
