@@ -51,7 +51,7 @@ class HealthyTableViewController: UITableViewController {
             //Take the value from the snapshot and added it to the postData array
             print (snapshot)
             
-            //let name = snapshot.value!["name"] as! String
+           // let name = snapshot.value!["name"] as! String
             //let price = snapshot.value!["price"] as! Float
             
             //self.posts.insert(drinkStruct(name: name, price: price) , atIndex:0)

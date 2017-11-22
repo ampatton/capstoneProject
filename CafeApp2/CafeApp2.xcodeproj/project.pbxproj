@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		244084198C3FC8C4669DC698 /* Pods_CafeApp2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB74165FE4AEFDC717F118E4 /* Pods_CafeApp2.framework */; };
-		994D04611FC4939A00A3262A /* FoodChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994D04601FC4939A00A3262A /* FoodChoice.swift */; };
+		994D04671FC5E3B500A3262A /* NewHealth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994D04661FC5E3B500A3262A /* NewHealth.swift */; };
 		99A934361FC2635700ADC9E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99A934351FC2635700ADC9E5 /* GoogleService-Info.plist */; };
 		99A934381FC3C9DB00ADC9E5 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A934371FC3C9DB00ADC9E5 /* AuthViewController.swift */; };
 		D51A356B1FABD1A5001B0668 /* HealthyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A356A1FABD1A5001B0668 /* HealthyViewController.swift */; };
@@ -47,7 +47,7 @@
 /* Begin PBXFileReference section */
 		1A9E7C97B39A99C2B854D2D2 /* Pods-CafeApp2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeApp2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CafeApp2/Pods-CafeApp2.debug.xcconfig"; sourceTree = "<group>"; };
 		1F08E86B76A45287E3079E7A /* Pods_CafeApp2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CafeApp2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		994D04601FC4939A00A3262A /* FoodChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodChoice.swift; sourceTree = "<group>"; };
+		994D04661FC5E3B500A3262A /* NewHealth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHealth.swift; sourceTree = "<group>"; };
 		99A934351FC2635700ADC9E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		99A934371FC3C9DB00ADC9E5 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		AD6DABAC1267FF0ABE2AE3D0 /* Pods-CafeApp2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeApp2.release.xcconfig"; path = "Pods/Target Support Files/Pods-CafeApp2/Pods-CafeApp2.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,7 +145,6 @@
 		D541F5261FA2B1BF001F2343 /* CafeApp2 */ = {
 			isa = PBXGroup;
 			children = (
-				994D04601FC4939A00A3262A /* FoodChoice.swift */,
 				D541F5271FA2B1BF001F2343 /* AppDelegate.swift */,
 				D541F5291FA2B1BF001F2343 /* UnhealthyViewController.swift */,
 				D541F55A1FA2D926001F2343 /* UnhealthyTableViewController.swift */,
@@ -161,6 +160,7 @@
 				D563A04C1FB4FB7D00B240C7 /* SurveyItem.swift */,
 				99A934351FC2635700ADC9E5 /* GoogleService-Info.plist */,
 				99A934371FC3C9DB00ADC9E5 /* AuthViewController.swift */,
+				994D04661FC5E3B500A3262A /* NewHealth.swift */,
 			);
 			path = CafeApp2;
 			sourceTree = "<group>";
@@ -384,9 +384,9 @@
 				D541F52A1FA2B1BF001F2343 /* UnhealthyViewController.swift in Sources */,
 				D563A04D1FB4FB7D00B240C7 /* SurveyItem.swift in Sources */,
 				99A934381FC3C9DB00ADC9E5 /* AuthViewController.swift in Sources */,
-				994D04611FC4939A00A3262A /* FoodChoice.swift in Sources */,
 				D541F5301FA2B1BF001F2343 /* CafeApp2.xcdatamodeld in Sources */,
 				D563A04B1FB4EF5500B240C7 /* SurveyViewController.swift in Sources */,
+				994D04671FC5E3B500A3262A /* NewHealth.swift in Sources */,
 				D541F5591FA2B295001F2343 /* HealthyTableViewController.swift in Sources */,
 				D541F55D1FA2DAE5001F2343 /* MenuItem.swift in Sources */,
 				D541F5281FA2B1BF001F2343 /* AppDelegate.swift in Sources */,
