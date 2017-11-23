@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class healthyMenuCell: UITableViewCell{
     
@@ -31,7 +33,21 @@ class HealthyTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        post ()
     }
+    
+    func post(){
+        FirebaseApp.configure()
+        let title = "Title"
+        let message = "Message"
+        
+        let post : [String : AnyObject] = ["title" : title as AnyObject, "message" : message as AnyObject]
+        
+        let databaseRef = Database.database().reference()
+        
+        databaseRef.child("Posts").childByAutoId().setValue(post)
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

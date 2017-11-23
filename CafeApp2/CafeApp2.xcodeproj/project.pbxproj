@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D3FE6802E560DF6E5A4253A /* Pods_CafeApp2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7179DEFC0685AB36333F73E /* Pods_CafeApp2UITests.framework */; };
+		0CA7A4F4075695234F4BD185 /* Pods_CafeApp2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E214C4EBEC11BABBEFDB1DE8 /* Pods_CafeApp2Tests.framework */; };
+		6113D36C90E3FEE38EE17C14 /* Pods_CafeApp2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CAB5B5EF0C950B5E5980643 /* Pods_CafeApp2.framework */; };
 		D51A356B1FABD1A5001B0668 /* HealthyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A356A1FABD1A5001B0668 /* HealthyViewController.swift */; };
 		D541F5281FA2B1BF001F2343 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D541F5271FA2B1BF001F2343 /* AppDelegate.swift */; };
 		D541F52A1FA2B1BF001F2343 /* UnhealthyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D541F5291FA2B1BF001F2343 /* UnhealthyViewController.swift */; };
@@ -23,8 +24,7 @@
 		D563A04B1FB4EF5500B240C7 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D563A04A1FB4EF5500B240C7 /* SurveyViewController.swift */; };
 		D563A04D1FB4FB7D00B240C7 /* SurveyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D563A04C1FB4FB7D00B240C7 /* SurveyItem.swift */; };
 		D57A6DDF1FBE60000099190D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D57A6DDE1FBE60000099190D /* GoogleService-Info.plist */; };
-		FB0AFE00EF1A1D1E072ACB64 /* Pods_CafeApp2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1CF5D9D5EB05A1020D2937 /* Pods_CafeApp2Tests.framework */; };
-		FBF72E83D170D353D0E45D71 /* Pods_CafeApp2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FB244C59BD2296422930C3 /* Pods_CafeApp2.framework */; };
+		EE80208E5A38A578AE4E5A13 /* Pods_CafeApp2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4081BA46E3238F5DAC7A1C9 /* Pods_CafeApp2UITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,11 +45,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		053B8327AAEBC82932DE7D6F /* Pods-CafeApp2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeApp2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CafeApp2Tests/Pods-CafeApp2Tests.release.xcconfig"; sourceTree = "<group>"; };
-		0566CFE61ECA847E98AEE271 /* Pods-CafeApp2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeApp2.release.xcconfig"; path = "Pods/Target Support Files/Pods-CafeApp2/Pods-CafeApp2.release.xcconfig"; sourceTree = "<group>"; };
-		06071B68D81B835CBEE339DE /* Pods-CafeApp2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeApp2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CafeApp2/Pods-CafeApp2.debug.xcconfig"; sourceTree = "<group>"; };
-		939B28FFE5D290EA7D36C730 /* Pods-CafeApp2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeApp2UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CafeApp2UITests/Pods-CafeApp2UITests.release.xcconfig"; sourceTree = "<group>"; };
-		C3FB244C59BD2296422930C3 /* Pods_CafeApp2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CafeApp2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EAEC13170065E67096D0FD0 /* Pods-CafeApp2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeApp2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CafeApp2/Pods-CafeApp2.debug.xcconfig"; sourceTree = "<group>"; };
+		3837DBF63EEFF2129C225836 /* Pods-CafeApp2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeApp2.release.xcconfig"; path = "Pods/Target Support Files/Pods-CafeApp2/Pods-CafeApp2.release.xcconfig"; sourceTree = "<group>"; };
+		50964864B4493C47BB957A00 /* Pods-CafeApp2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeApp2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CafeApp2Tests/Pods-CafeApp2Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		78A59CC6419AFAD341F97D3D /* Pods-CafeApp2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeApp2UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CafeApp2UITests/Pods-CafeApp2UITests.release.xcconfig"; sourceTree = "<group>"; };
+		8ED9D1D7EBF3FF82C5CFCE8B /* Pods-CafeApp2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeApp2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CafeApp2Tests/Pods-CafeApp2Tests.release.xcconfig"; sourceTree = "<group>"; };
+		9CAB5B5EF0C950B5E5980643 /* Pods_CafeApp2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CafeApp2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4081BA46E3238F5DAC7A1C9 /* Pods_CafeApp2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CafeApp2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D51A356A1FABD1A5001B0668 /* HealthyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyViewController.swift; sourceTree = "<group>"; };
 		D541F5241FA2B1BF001F2343 /* CafeApp2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafeApp2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D541F5271FA2B1BF001F2343 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,10 +73,8 @@
 		D563A04A1FB4EF5500B240C7 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		D563A04C1FB4FB7D00B240C7 /* SurveyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyItem.swift; sourceTree = "<group>"; };
 		D57A6DDE1FBE60000099190D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D7A1D236F5FEF34B46641BA3 /* Pods-CafeApp2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeApp2UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CafeApp2UITests/Pods-CafeApp2UITests.debug.xcconfig"; sourceTree = "<group>"; };
-		DA1CF5D9D5EB05A1020D2937 /* Pods_CafeApp2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CafeApp2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7179DEFC0685AB36333F73E /* Pods_CafeApp2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CafeApp2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F55B3D461F666D52B6475325 /* Pods-CafeApp2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeApp2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CafeApp2Tests/Pods-CafeApp2Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		DC37CC7D1E2F4041491FB35A /* Pods-CafeApp2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeApp2UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CafeApp2UITests/Pods-CafeApp2UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E214C4EBEC11BABBEFDB1DE8 /* Pods_CafeApp2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CafeApp2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBF72E83D170D353D0E45D71 /* Pods_CafeApp2.framework in Frameworks */,
+				6113D36C90E3FEE38EE17C14 /* Pods_CafeApp2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB0AFE00EF1A1D1E072ACB64 /* Pods_CafeApp2Tests.framework in Frameworks */,
+				0CA7A4F4075695234F4BD185 /* Pods_CafeApp2Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,32 +98,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D3FE6802E560DF6E5A4253A /* Pods_CafeApp2UITests.framework in Frameworks */,
+				EE80208E5A38A578AE4E5A13 /* Pods_CafeApp2UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		21775AC3E2419C0B5564A45A /* Pods */ = {
+		912DF9A3A508949C71F71003 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				06071B68D81B835CBEE339DE /* Pods-CafeApp2.debug.xcconfig */,
-				0566CFE61ECA847E98AEE271 /* Pods-CafeApp2.release.xcconfig */,
-				F55B3D461F666D52B6475325 /* Pods-CafeApp2Tests.debug.xcconfig */,
-				053B8327AAEBC82932DE7D6F /* Pods-CafeApp2Tests.release.xcconfig */,
-				D7A1D236F5FEF34B46641BA3 /* Pods-CafeApp2UITests.debug.xcconfig */,
-				939B28FFE5D290EA7D36C730 /* Pods-CafeApp2UITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		BABC88D449B0B97989604C3C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C3FB244C59BD2296422930C3 /* Pods_CafeApp2.framework */,
-				DA1CF5D9D5EB05A1020D2937 /* Pods_CafeApp2Tests.framework */,
-				E7179DEFC0685AB36333F73E /* Pods_CafeApp2UITests.framework */,
+				9CAB5B5EF0C950B5E5980643 /* Pods_CafeApp2.framework */,
+				E214C4EBEC11BABBEFDB1DE8 /* Pods_CafeApp2Tests.framework */,
+				B4081BA46E3238F5DAC7A1C9 /* Pods_CafeApp2UITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -135,8 +122,8 @@
 				D541F53E1FA2B1BF001F2343 /* CafeApp2Tests */,
 				D541F5491FA2B1BF001F2343 /* CafeApp2UITests */,
 				D541F5251FA2B1BF001F2343 /* Products */,
-				21775AC3E2419C0B5564A45A /* Pods */,
-				BABC88D449B0B97989604C3C /* Frameworks */,
+				D9C31D711332A7F5C35E1F35 /* Pods */,
+				912DF9A3A508949C71F71003 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,6 +176,19 @@
 			path = CafeApp2UITests;
 			sourceTree = "<group>";
 		};
+		D9C31D711332A7F5C35E1F35 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0EAEC13170065E67096D0FD0 /* Pods-CafeApp2.debug.xcconfig */,
+				3837DBF63EEFF2129C225836 /* Pods-CafeApp2.release.xcconfig */,
+				50964864B4493C47BB957A00 /* Pods-CafeApp2Tests.debug.xcconfig */,
+				8ED9D1D7EBF3FF82C5CFCE8B /* Pods-CafeApp2Tests.release.xcconfig */,
+				DC37CC7D1E2F4041491FB35A /* Pods-CafeApp2UITests.debug.xcconfig */,
+				78A59CC6419AFAD341F97D3D /* Pods-CafeApp2UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -196,12 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D541F54F1FA2B1BF001F2343 /* Build configuration list for PBXNativeTarget "CafeApp2" */;
 			buildPhases = (
-				31A32AA2919FD4EFA3789434 /* [CP] Check Pods Manifest.lock */,
+				DBA6D75DE52275E996CF3092 /* [CP] Check Pods Manifest.lock */,
 				D541F5201FA2B1BF001F2343 /* Sources */,
 				D541F5211FA2B1BF001F2343 /* Frameworks */,
 				D541F5221FA2B1BF001F2343 /* Resources */,
-				1DD756A3670836F94F654FA6 /* [CP] Embed Pods Frameworks */,
-				330430B985ECBD0F521ECD8B /* [CP] Copy Pods Resources */,
+				833E33D1EDD28E9A4345C7CB /* [CP] Embed Pods Frameworks */,
+				6EEF160B99EE03343B1BE31F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -216,12 +216,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D541F5521FA2B1BF001F2343 /* Build configuration list for PBXNativeTarget "CafeApp2Tests" */;
 			buildPhases = (
-				0E0E3EA91ABF1819CE07C56A /* [CP] Check Pods Manifest.lock */,
+				34A0DC22496E1F53A08A475D /* [CP] Check Pods Manifest.lock */,
 				D541F5371FA2B1BF001F2343 /* Sources */,
 				D541F5381FA2B1BF001F2343 /* Frameworks */,
 				D541F5391FA2B1BF001F2343 /* Resources */,
-				8C756431D6CDD095C54F4187 /* [CP] Embed Pods Frameworks */,
-				932444A35A31413FEBA9C6F8 /* [CP] Copy Pods Resources */,
+				3D18545D1E3E7A424ED008B4 /* [CP] Embed Pods Frameworks */,
+				C49BE0DCC8D7741BAAA2805B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,12 +237,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D541F5551FA2B1BF001F2343 /* Build configuration list for PBXNativeTarget "CafeApp2UITests" */;
 			buildPhases = (
-				F852075B367739E4236C60AF /* [CP] Check Pods Manifest.lock */,
+				27D54A6F7AFEE2D5B1D29270 /* [CP] Check Pods Manifest.lock */,
 				D541F5421FA2B1BF001F2343 /* Sources */,
 				D541F5431FA2B1BF001F2343 /* Frameworks */,
 				D541F5441FA2B1BF001F2343 /* Resources */,
-				2AE1FD5229015E5A97DF3881 /* [CP] Embed Pods Frameworks */,
-				45F474D6DE350B18E69246D0 /* [CP] Copy Pods Resources */,
+				92313EC78B29FDB47FFED001 /* [CP] Embed Pods Frameworks */,
+				81A5CADD37414D018949EC33 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -329,7 +329,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0E0E3EA91ABF1819CE07C56A /* [CP] Check Pods Manifest.lock */ = {
+		27D54A6F7AFEE2D5B1D29270 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CafeApp2UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34A0DC22496E1F53A08A475D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -347,7 +365,52 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1DD756A3670836F94F654FA6 /* [CP] Embed Pods Frameworks */ = {
+		3D18545D1E3E7A424ED008B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CafeApp2Tests/Pods-CafeApp2Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6EEF160B99EE03343B1BE31F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CafeApp2/Pods-CafeApp2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81A5CADD37414D018949EC33 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CafeApp2UITests/Pods-CafeApp2UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		833E33D1EDD28E9A4345C7CB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -369,7 +432,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CafeApp2/Pods-CafeApp2-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2AE1FD5229015E5A97DF3881 /* [CP] Embed Pods Frameworks */ = {
+		92313EC78B29FDB47FFED001 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -384,70 +447,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CafeApp2UITests/Pods-CafeApp2UITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		31A32AA2919FD4EFA3789434 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CafeApp2-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		330430B985ECBD0F521ECD8B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CafeApp2/Pods-CafeApp2-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		45F474D6DE350B18E69246D0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CafeApp2UITests/Pods-CafeApp2UITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8C756431D6CDD095C54F4187 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CafeApp2Tests/Pods-CafeApp2Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		932444A35A31413FEBA9C6F8 /* [CP] Copy Pods Resources */ = {
+		C49BE0DCC8D7741BAAA2805B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -462,7 +462,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CafeApp2Tests/Pods-CafeApp2Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F852075B367739E4236C60AF /* [CP] Check Pods Manifest.lock */ = {
+		DBA6D75DE52275E996CF3092 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -473,7 +473,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CafeApp2UITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CafeApp2-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -659,7 +659,7 @@
 		};
 		D541F5501FA2B1BF001F2343 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06071B68D81B835CBEE339DE /* Pods-CafeApp2.debug.xcconfig */;
+			baseConfigurationReference = 0EAEC13170065E67096D0FD0 /* Pods-CafeApp2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -674,7 +674,7 @@
 		};
 		D541F5511FA2B1BF001F2343 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0566CFE61ECA847E98AEE271 /* Pods-CafeApp2.release.xcconfig */;
+			baseConfigurationReference = 3837DBF63EEFF2129C225836 /* Pods-CafeApp2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -689,7 +689,7 @@
 		};
 		D541F5531FA2B1BF001F2343 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F55B3D461F666D52B6475325 /* Pods-CafeApp2Tests.debug.xcconfig */;
+			baseConfigurationReference = 50964864B4493C47BB957A00 /* Pods-CafeApp2Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -706,7 +706,7 @@
 		};
 		D541F5541FA2B1BF001F2343 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 053B8327AAEBC82932DE7D6F /* Pods-CafeApp2Tests.release.xcconfig */;
+			baseConfigurationReference = 8ED9D1D7EBF3FF82C5CFCE8B /* Pods-CafeApp2Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -723,7 +723,7 @@
 		};
 		D541F5561FA2B1BF001F2343 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D7A1D236F5FEF34B46641BA3 /* Pods-CafeApp2UITests.debug.xcconfig */;
+			baseConfigurationReference = DC37CC7D1E2F4041491FB35A /* Pods-CafeApp2UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -739,7 +739,7 @@
 		};
 		D541F5571FA2B1BF001F2343 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 939B28FFE5D290EA7D36C730 /* Pods-CafeApp2UITests.release.xcconfig */;
+			baseConfigurationReference = 78A59CC6419AFAD341F97D3D /* Pods-CafeApp2UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

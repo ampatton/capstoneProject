@@ -17,6 +17,7 @@ class unhealthyMenuCell: UITableViewCell{
 
 class UnhealthyTableViewController: UITableViewController {
 
+    
         var unhealthy = Array<MenuItem>()
         var unhealthyItem1 = MenuItem(name: "pancakes", description: "Light and fluffy", image: UIImage(), price: 9.99, timeStore: 999)
     
@@ -32,6 +33,8 @@ class UnhealthyTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        post ()
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,13 +55,18 @@ class UnhealthyTableViewController: UITableViewController {
     }
     
     func post(){
+        
+        if(FirebaseApp.app() == nil){
+             FirebaseApp.configure()
+        }
+
         let title = "Swift Title"
-        let message = "Message"
+        let message = "Swift message from Austin"
         let post : [String : AnyObject] = ["title" : title as AnyObject, "message" : message as AnyObject]
         
         let databaseRef = Database.database().reference()
         
-        databaseRef.child("Posts").childByAutoId().setValue(post)
+        databaseRef.child("FirebaseTest").childByAutoId().setValue(post)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
