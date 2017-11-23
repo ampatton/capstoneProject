@@ -15,7 +15,8 @@ class SurveyViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var timeButton: UISwitch!
     
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var textView: UITextView!
+    //@IBOutlet weak var textField: UITextField!
     
     @IBAction func submitButtonPressed(_ sender: Any) {
         if (timeButton.isOn == true){
@@ -39,18 +40,22 @@ class SurveyViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Survey"
-        textField.delegate = self
+        //textField.delegate = self   This is for a text field instead of a text view
         
         // Do any additional setup after loading the view.
     }
 
     
-    func textFieldShouldReturn(_ textView: UITextField) -> Bool {
+    /*func textFieldShouldReturn(_ textView: UITextField) -> Bool {
         textField.resignFirstResponder()
         
         return true
+    } This function is for a text field instead of a text view */
+    
+    @IBAction func dismissButtonPressed(_ sender: Any) {
+        textView.resignFirstResponder()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
