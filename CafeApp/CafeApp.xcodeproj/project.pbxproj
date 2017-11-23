@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D53240D71F901C4800C4BE9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53240D61F901C4800C4BE9E /* AppDelegate.swift */; };
-		D53240D91F901C4800C4BE9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53240D81F901C4800C4BE9E /* ViewController.swift */; };
+		D53240D91F901C4800C4BE9E /* HealthyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53240D81F901C4800C4BE9E /* HealthyViewController.swift */; };
 		D53240DC1F901C4800C4BE9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53240DA1F901C4800C4BE9E /* Main.storyboard */; };
 		D53240DF1F901C4800C4BE9E /* CafeApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D53240DD1F901C4800C4BE9E /* CafeApp.xcdatamodeld */; };
 		D53240E11F901C4800C4BE9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53240E01F901C4800C4BE9E /* Assets.xcassets */; };
@@ -38,7 +38,7 @@
 /* Begin PBXFileReference section */
 		D53240D31F901C4800C4BE9E /* CafeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53240D61F901C4800C4BE9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D53240D81F901C4800C4BE9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D53240D81F901C4800C4BE9E /* HealthyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyViewController.swift; sourceTree = "<group>"; };
 		D53240DB1F901C4800C4BE9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D53240DE1F901C4800C4BE9E /* CafeApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CafeApp.xcdatamodel; sourceTree = "<group>"; };
 		D53240E01F901C4800C4BE9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				D53240D61F901C4800C4BE9E /* AppDelegate.swift */,
-				D53240D81F901C4800C4BE9E /* ViewController.swift */,
+				D53240D81F901C4800C4BE9E /* HealthyViewController.swift */,
 				D532410B1F902C6800C4BE9E /* MenuChoicesTableViewController.swift */,
 				D53240DA1F901C4800C4BE9E /* Main.storyboard */,
 				D53240E01F901C4800C4BE9E /* Assets.xcassets */,
@@ -265,7 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D53240D91F901C4800C4BE9E /* ViewController.swift in Sources */,
+				D53240D91F901C4800C4BE9E /* HealthyViewController.swift in Sources */,
 				D532410C1F902C6800C4BE9E /* MenuChoicesTableViewController.swift in Sources */,
 				D53240D71F901C4800C4BE9E /* AppDelegate.swift in Sources */,
 				D53240DF1F901C4800C4BE9E /* CafeApp.xcdatamodeld in Sources */,

@@ -311,23 +311,35 @@
             </objects>
             <point key="canvasLocation" x="3424.8000000000002" y="339.58020989505252"/>
         </scene>
-        <!--View Controller-->
+        <!--Survey2 View Controller-->
         <scene sceneID="Ifs-Q4-26V">
             <objects>
-                <viewController id="pzv-ei-f3Y" sceneMemberID="viewController">
+                <viewController id="pzv-ei-f3Y" customClass="Survey2ViewController" customModule="CafeApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4aA-16-Za2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5R7-AJ-Q4c">
-                                <rect key="frame" x="183" y="524" width="37" height="16"/>
+                                <rect key="frame" x="169" y="314" width="37" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="ufB-K4-9ny"/>
+                                </constraints>
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <segue destination="HBJ-Jd-ZB7" kind="show" id="t1M-Zy-EGj"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for your response! Please hit the done button below to return to the home screen." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xda-1E-CTx">
-                                <rect key="frame" x="8" y="346.5" width="359" height="38.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5c-Cw-Dt1">
+                                <rect key="frame" x="163" y="219" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Survey"/>
+                                <connections>
+                                    <action selector="surveyButtonPressed:" destination="pzv-ei-f3Y" eventType="touchUpInside" id="6Ho-Hx-jpH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xda-1E-CTx">
+                                <rect key="frame" x="8" y="82" width="351" height="77"/>
+                                <string key="text">Thank you for your response! Please complete the survey by clicking on the "Survey" button, and then click the done button below to return to the home screen.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -335,11 +347,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hhG-qo-r4Z" firstAttribute="bottom" secondItem="5R7-AJ-Q4c" secondAttribute="bottom" constant="127" id="NJW-6t-4RA"/>
+                            <constraint firstItem="hhG-qo-r4Z" firstAttribute="bottom" secondItem="5R7-AJ-Q4c" secondAttribute="bottom" constant="127" id="9r0-ZE-cfc"/>
+                            <constraint firstItem="5R7-AJ-Q4c" firstAttribute="leading" secondItem="hhG-qo-r4Z" secondAttribute="leading" constant="183" id="Kg7-kc-HRo"/>
                             <constraint firstItem="xda-1E-CTx" firstAttribute="leading" secondItem="hhG-qo-r4Z" secondAttribute="leading" constant="8" id="TaB-Yj-aH3"/>
                             <constraint firstItem="xda-1E-CTx" firstAttribute="trailing" secondItem="hhG-qo-r4Z" secondAttribute="trailing" constant="-8" id="iG8-2P-Df2"/>
                             <constraint firstItem="xda-1E-CTx" firstAttribute="centerY" secondItem="hhG-qo-r4Z" secondAttribute="centerY" id="mRo-58-plc"/>
-                            <constraint firstItem="5R7-AJ-Q4c" firstAttribute="centerX" secondItem="hhG-qo-r4Z" secondAttribute="centerX" id="qav-U2-yhb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hhG-qo-r4Z"/>
                     </view>
@@ -386,6 +398,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wKr-1m-wXM"/>
+        <segue reference="t1M-Zy-EGj"/>
     </inferredMetricsTieBreakers>
 </document>

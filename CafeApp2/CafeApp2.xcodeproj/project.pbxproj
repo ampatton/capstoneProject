@@ -21,6 +21,7 @@
 		D541F5591FA2B295001F2343 /* HealthyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D541F5581FA2B295001F2343 /* HealthyTableViewController.swift */; };
 		D541F55B1FA2D926001F2343 /* UnhealthyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D541F55A1FA2D926001F2343 /* UnhealthyTableViewController.swift */; };
 		D541F55D1FA2DAE5001F2343 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D541F55C1FA2DAE5001F2343 /* MenuItem.swift */; };
+		D55E58281FC6879A00313B67 /* Survey2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55E58271FC6879A00313B67 /* Survey2ViewController.swift */; };
 		D563A04B1FB4EF5500B240C7 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D563A04A1FB4EF5500B240C7 /* SurveyViewController.swift */; };
 		D563A04D1FB4FB7D00B240C7 /* SurveyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D563A04C1FB4FB7D00B240C7 /* SurveyItem.swift */; };
 		D57A6DDF1FBE60000099190D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D57A6DDE1FBE60000099190D /* GoogleService-Info.plist */; };
@@ -70,6 +71,7 @@
 		D541F5581FA2B295001F2343 /* HealthyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyTableViewController.swift; sourceTree = "<group>"; };
 		D541F55A1FA2D926001F2343 /* UnhealthyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnhealthyTableViewController.swift; sourceTree = "<group>"; };
 		D541F55C1FA2DAE5001F2343 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		D55E58271FC6879A00313B67 /* Survey2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey2ViewController.swift; sourceTree = "<group>"; };
 		D563A04A1FB4EF5500B240C7 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		D563A04C1FB4FB7D00B240C7 /* SurveyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyItem.swift; sourceTree = "<group>"; };
 		D57A6DDE1FBE60000099190D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				D51A356A1FABD1A5001B0668 /* HealthyViewController.swift */,
 				D563A04A1FB4EF5500B240C7 /* SurveyViewController.swift */,
 				D563A04C1FB4FB7D00B240C7 /* SurveyItem.swift */,
+				D55E58271FC6879A00313B67 /* Survey2ViewController.swift */,
 			);
 			path = CafeApp2;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 				D541F5281FA2B1BF001F2343 /* AppDelegate.swift in Sources */,
 				D51A356B1FABD1A5001B0668 /* HealthyViewController.swift in Sources */,
 				D541F55B1FA2D926001F2343 /* UnhealthyTableViewController.swift in Sources */,
+				D55E58281FC6879A00313B67 /* Survey2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
