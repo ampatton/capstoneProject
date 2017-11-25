@@ -25,6 +25,7 @@
 		D563A04B1FB4EF5500B240C7 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D563A04A1FB4EF5500B240C7 /* SurveyViewController.swift */; };
 		D563A04D1FB4FB7D00B240C7 /* SurveyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D563A04C1FB4FB7D00B240C7 /* SurveyItem.swift */; };
 		D57A6DDF1FBE60000099190D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D57A6DDE1FBE60000099190D /* GoogleService-Info.plist */; };
+		D5F871AA1FC8B64A00160866 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F871A91FC8B64A00160866 /* MessageUI.framework */; };
 		EE80208E5A38A578AE4E5A13 /* Pods_CafeApp2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4081BA46E3238F5DAC7A1C9 /* Pods_CafeApp2UITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		D563A04A1FB4EF5500B240C7 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		D563A04C1FB4FB7D00B240C7 /* SurveyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyItem.swift; sourceTree = "<group>"; };
 		D57A6DDE1FBE60000099190D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D5F871A91FC8B64A00160866 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		DC37CC7D1E2F4041491FB35A /* Pods-CafeApp2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeApp2UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CafeApp2UITests/Pods-CafeApp2UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E214C4EBEC11BABBEFDB1DE8 /* Pods_CafeApp2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CafeApp2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -84,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5F871AA1FC8B64A00160866 /* MessageUI.framework in Frameworks */,
 				6113D36C90E3FEE38EE17C14 /* Pods_CafeApp2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,6 +113,7 @@
 		912DF9A3A508949C71F71003 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D5F871A91FC8B64A00160866 /* MessageUI.framework */,
 				9CAB5B5EF0C950B5E5980643 /* Pods_CafeApp2.framework */,
 				E214C4EBEC11BABBEFDB1DE8 /* Pods_CafeApp2Tests.framework */,
 				B4081BA46E3238F5DAC7A1C9 /* Pods_CafeApp2UITests.framework */,
@@ -269,16 +273,16 @@
 				TargetAttributes = {
 					D541F5231FA2B1BF001F2343 = {
 						CreatedOnToolsVersion = 9.0.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					D541F53A1FA2B1BF001F2343 = {
 						CreatedOnToolsVersion = 9.0.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						TestTargetID = D541F5231FA2B1BF001F2343;
 					};
 					D541F5451FA2B1BF001F2343 = {
 						CreatedOnToolsVersion = 9.0.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						TestTargetID = D541F5231FA2B1BF001F2343;
 					};
 				};
@@ -666,11 +670,14 @@
 			baseConfigurationReference = 0EAEC13170065E67096D0FD0 /* Pods-CafeApp2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CafeApp2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cap.CafeApp2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -681,11 +688,14 @@
 			baseConfigurationReference = 3837DBF63EEFF2129C225836 /* Pods-CafeApp2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CafeApp2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cap.CafeApp2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -697,11 +707,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CafeApp2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cap.CafeApp2Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CafeApp2.app/CafeApp2";
@@ -714,11 +726,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CafeApp2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cap.CafeApp2Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CafeApp2.app/CafeApp2";
@@ -730,11 +744,13 @@
 			baseConfigurationReference = DC37CC7D1E2F4041491FB35A /* Pods-CafeApp2UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CafeApp2UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cap.CafeApp2UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CafeApp2;
@@ -746,11 +762,13 @@
 			baseConfigurationReference = 78A59CC6419AFAD341F97D3D /* Pods-CafeApp2UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CafeApp2UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cap.CafeApp2UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CafeApp2;
