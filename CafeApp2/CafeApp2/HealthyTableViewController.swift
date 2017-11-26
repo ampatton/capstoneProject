@@ -22,9 +22,23 @@ struct drinkStruct{
     let price : Float!
 }
 
+struct menuItemStruct{
+    let name: String!
+    let calories: Int!
+    let carbohydrate: Int!
+    let cholesterol: Int!
+    let description: String!
+    let fat: Int!
+    let price: Float!
+    let protein: Int!
+    let sodium: Int!
+}
+
 class HealthyTableViewController: UITableViewController {
 
     var drinks = [drinkStruct]()
+    var menuItems = [menuItemStruct]()
+    
     var ref:DatabaseReference?
     var configuredBool: Bool = false
     
@@ -38,11 +52,36 @@ class HealthyTableViewController: UITableViewController {
             configuredBool = true
         }
         
-        ref = Database.database().reference()
         self.title = "Cafe at Eckles Menu"
         
+        loadDrinks()
+        loadMenuItems()
+        
+    
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         
+        //post ()
+    }
+    
+    func post(){
+        let title = "Title"
+        let message = "Message"
+        
+        let post : [String : AnyObject] = ["title" : title as AnyObject, "message" : message as AnyObject]
+        
+        let databaseRef = Database.database().reference()
+        
+        databaseRef.child("Posts").childByAutoId().setValue(post)
+    }
+    
+    func loadDrinks () {
+        ref = Database.database().reference()
         
         ref?.child("menu_items").child("Drinks").child("coffee").observeSingleEvent(of: .value, with: {(snapshot) in
             print (snapshot)
@@ -56,25 +95,26 @@ class HealthyTableViewController: UITableViewController {
             
             self.tableView.reloadData()
         })
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        //post ()
     }
     
-    func post(){
-        FirebaseApp.configure()
-        let title = "Title"
-        let message = "Message"
+    func loadMenuItems(){
+        ref = Database.database().reference()
         
-        let post : [String : AnyObject] = ["title" : title as AnyObject, "message" : message as AnyObject]
-        
-        let databaseRef = Database.database().reference()
-        
-        databaseRef.child("Posts").childByAutoId().setValue(post)
+        ref?.child("menu_items").child("Wraps").observeSingleEvent(of: .value, with: {(snapshot) in
+            print (snapshot)
+            var i = 0
+            
+            //let name = snapshot.value!["name"]
+            let dict = snapshot.value as? NSDictionary, name = dict!["name"] as? String, calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, price = dict!["price"] as? Float, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int
+            
+            
+            print (dict)
+            
+            self.menuItems.insert(menuItemStruct(name: name, calories: calories, carbohydrate: carbohydrate, cholesterol: cholesterol, description: description, fat: fat, price: price, protein: protein, sodium: sodium ), at: i)
+            i += 1
+            print("------------------------------------------------------")
+            self.tableView.reloadData()
+        })
     }
 
 
@@ -83,15 +123,12 @@ class HealthyTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return drinks.count
     }
     
@@ -101,9 +138,12 @@ class HealthyTableViewController: UITableViewController {
 
          cell.healthyTextView.isEditable = false
         
-        cell.healthyTextView?.text = drinks[indexPath.row].name + drinks[indexPath.row].price.description
+        cell.healthyTextView?.text = drinks[indexPath.row].name + " \n$ " + drinks[indexPath.row].price.description
         
-        print(drinks[indexPath.row].price.description)
+        //cell.healthyTextView?.text = menuItems[indexPath.row].name + " \n$ " + menuItems[indexPath.row].price.description
+        //menuItem array isnt getting data loaded in right. Not sure why
+        
+        //print(drinks[indexPath.row].price.description) just to test that you can print a float using description
         return cell
     }
 
@@ -148,16 +188,12 @@ class HealthyTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-       /* let cell = sender as! UITableViewCell
+       let cell = sender as! UITableViewCell
         let indexPath = self.tableView.indexPath(for: cell)
-        
-        let food = healthy[indexPath!.row].name
-        let description = healthy[indexPath!.row].description
-        let price = String(healthy[indexPath!.row].price)
         
         
         let viewController = segue.destination as! HealthyViewController
-        viewController.testText = food + "\n Description: " + description + "\n Price " + price*/
+        viewController.testText = drinks[indexPath!.row].name + "\n$ " + drinks[indexPath!.row].price.description
         
         
         // Get the new view controller using segue.destinationViewController.
