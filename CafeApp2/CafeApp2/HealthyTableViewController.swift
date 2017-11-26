@@ -99,13 +99,14 @@ class HealthyTableViewController: UITableViewController {
     
     func loadMenuItems(){
         ref = Database.database().reference()
+        var i = 0
         
         ref?.child("menu_items").child("Wraps").observeSingleEvent(of: .value, with: {(snapshot) in
             print (snapshot)
-            var i = 0
+            
             
             //let name = snapshot.value!["name"]
-            let dict = snapshot.value as? NSDictionary, name = dict!["name"] as? String, calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, price = dict!["price"] as? Float, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int
+            let dict = snapshot.value as? NSDictionary, calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Float, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int
             
             
             print (dict)
