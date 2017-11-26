@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import MessageUI
 
-class UnhealthyViewController: UIViewController, MFMailComposeViewControllerDelegate {
+class UnhealthyViewController: UIViewController {
 
     @IBOutlet weak var testTextLabel: UILabel!
     
@@ -40,8 +39,6 @@ class UnhealthyViewController: UIViewController, MFMailComposeViewControllerDele
         
         self.title = "Menu Item Display"
         
-        
-        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -64,47 +61,15 @@ class UnhealthyViewController: UIViewController, MFMailComposeViewControllerDele
         print(seconds)       //These print statements are just to test that the right data is being recorded
         print(unhealthyItem1.description)
         
-        let mailComposeViewController = configuredMailComposeViewController()
-        
-        if MFMailComposeViewController.canSendMail() {
-            self.present(mailComposeViewController, animated: true, completion: nil)
-        } else {
-            self.showSendMailErrorAlert()
-        }
-        
         
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
     
-    func configuredMailComposeViewController() -> MFMailComposeViewController {
-        let mailComposerVC = MFMailComposeViewController()
-        mailComposerVC.mailComposeDelegate = self
-        
-        mailComposerVC.setToRecipients(["austinpatton59@gmail.com"])
-        mailComposerVC.setSubject("New Order")
-        mailComposerVC.setMessageBody("This is an example", isHTML: false)
-        //is it posssible to make the messageBody read only?
-        
-        return mailComposerVC
-    }
     
-    func showSendMailErrorAlert() {
-        let sendMailErrorAlert = UIAlertView(title: "Could not send order e-mail", message: "This device could not send the e-mail", delegate: self, cancelButtonTitle: "Ok")
-        sendMailErrorAlert.show()
-    }
     
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        controller.dismiss(animated: true, completion: nil)
-        
-    }
-
+    
 }
-
-    
-    
-    
-
 
 
 

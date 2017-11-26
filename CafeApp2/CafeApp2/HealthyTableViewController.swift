@@ -5,7 +5,7 @@
 //  Created by Austin Patton on 10/26/17.
 //  Copyright © 2017 Austin Patton. All rights reserved.
 //
-
+import Foundation
 import UIKit
 import Firebase
 import FirebaseDatabase
@@ -17,23 +17,52 @@ class healthyMenuCell: UITableViewCell{
     
 }
 
+struct drinkStruct{
+    let name : String!
+    let price : Float!
+}
+
 class HealthyTableViewController: UITableViewController {
 
-    var healthy = Array<MenuItem>()
+    var drinks = [drinkStruct]()
+    var ref:DatabaseReference?
+    var configuredBool: Bool = false
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var healthyItem1 = MenuItem(name: "pancakes", description: "Light and fluffy", image: UIImage(), price: 9, timeStore: 0)
-        self.title = "Cafe at Eckles Menu"
-        healthy.append(healthyItem1)
         
+        if(configuredBool == false){
+            FirebaseApp.configure()
+            configuredBool = true
+        }
+        
+        ref = Database.database().reference()
+        self.title = "Cafe at Eckles Menu"
+        
+        
+        
+        
+        ref?.child("menu_items").child("Drinks").child("coffee").observeSingleEvent(of: .value, with: {(snapshot) in
+            print (snapshot)
+            //let name = snapshot.value!["name"]
+            let dict = snapshot.value as? NSDictionary, name = dict!["name"] as? String, price = dict!["price"] as? Float
+            
+            
+            print (dict)
+            
+            self.drinks.insert(drinkStruct(name: name, price: price ), at: 0)
+            
+            self.tableView.reloadData()
+        })
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        post ()
+        //post ()
     }
     
     func post(){
@@ -63,18 +92,18 @@ class HealthyTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return healthy.count
+        return drinks.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "healthyMenuChoiceCell", for: indexPath) as! healthyMenuCell
-        
-        var priceDoubleConversion = String(healthy[indexPath.row].price)
 
          cell.healthyTextView.isEditable = false
         
-        cell.healthyTextView?.text = "Name: " + healthy[indexPath.row].name + "\n Description: " + healthy[indexPath.row].description + "\n Price: " + priceDoubleConversion
+        cell.healthyTextView?.text = drinks[indexPath.row].name + drinks[indexPath.row].price.description
+        
+        print(drinks[indexPath.row].price.description)
         return cell
     }
 
@@ -119,7 +148,7 @@ class HealthyTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let cell = sender as! UITableViewCell
+       /* let cell = sender as! UITableViewCell
         let indexPath = self.tableView.indexPath(for: cell)
         
         let food = healthy[indexPath!.row].name
@@ -128,7 +157,9 @@ class HealthyTableViewController: UITableViewController {
         
         
         let viewController = segue.destination as! HealthyViewController
-        viewController.testText = food + "\n Description: " + description + "\n Price " + price
+        viewController.testText = food + "\n Description: " + description + "\n Price " + price*/
+        
+        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
