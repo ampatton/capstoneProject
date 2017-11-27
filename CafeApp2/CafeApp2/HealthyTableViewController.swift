@@ -5,7 +5,7 @@
 //  Created by Austin Patton on 10/26/17.
 //  Copyright © 2017 Austin Patton. All rights reserved.
 //
-
+import Foundation
 import UIKit
 import Firebase
 import FirebaseDatabase
@@ -17,27 +17,59 @@ class healthyMenuCell: UITableViewCell{
     
 }
 
+struct drinkStruct{
+    let name : String!
+    let price : Float!
+}
+
+struct menuItemStruct{
+    let name: String!
+    let calories: Int!
+    let carbohydrate: Int!
+    let cholesterol: Int!
+    let description: String!
+    let fat: Int!
+    let price: Float!
+    let protein: Int!
+    let sodium: Int!
+}
+
 class HealthyTableViewController: UITableViewController {
 
-    var healthy = Array<MenuItem>()
+    var drinks = [drinkStruct]()
+    var menuItems = [menuItemStruct]()
+    
+    var ref:DatabaseReference?
+    var configuredBool: Bool = false
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var healthyItem1 = MenuItem(name: "pancakes", description: "Light and fluffy", image: UIImage(), price: 9, timeStore: 0)
-        self.title = "Cafe at Eckles Menu"
-        healthy.append(healthyItem1)
         
+        if(configuredBool == false){
+            FirebaseApp.configure()
+            configuredBool = true
+        }
+        
+        self.title = "Cafe at Eckles Menu"
+        
+        loadDrinks()
+        loadMenuItems()
+        
+    
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        post ()
+        
+        
+        //post ()
     }
     
     func post(){
-        FirebaseApp.configure()
         let title = "Title"
         let message = "Message"
         
@@ -47,6 +79,44 @@ class HealthyTableViewController: UITableViewController {
         
         databaseRef.child("Posts").childByAutoId().setValue(post)
     }
+    
+    func loadDrinks () {
+        ref = Database.database().reference()
+        
+        ref?.child("menu_items").child("Drinks").child("coffee").observeSingleEvent(of: .value, with: {(snapshot) in
+            print (snapshot)
+            //let name = snapshot.value!["name"]
+            let dict = snapshot.value as? NSDictionary, name = dict!["name"] as? String, price = dict!["price"] as? Float
+            
+            
+            print (dict)
+            
+            self.drinks.insert(drinkStruct(name: name, price: price ), at: 0)
+            
+            self.tableView.reloadData()
+        })
+    }
+    
+    func loadMenuItems(){
+        ref = Database.database().reference()
+        var i = 0
+        
+        ref?.child("menu_items").child("Wraps").observeSingleEvent(of: .value, with: {(snapshot) in
+            print (snapshot)
+            
+            
+            //let name = snapshot.value!["name"]
+            let dict = snapshot.value as? NSDictionary, calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Float, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int
+            
+            
+            print (dict)
+            
+            self.menuItems.insert(menuItemStruct(name: name, calories: calories, carbohydrate: carbohydrate, cholesterol: cholesterol, description: description, fat: fat, price: price, protein: protein, sodium: sodium ), at: i)
+            i += 1
+            print("------------------------------------------------------")
+            self.tableView.reloadData()
+        })
+    }
 
 
     override func didReceiveMemoryWarning() {
@@ -54,27 +124,27 @@ class HealthyTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return healthy.count
+        return drinks.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "healthyMenuChoiceCell", for: indexPath) as! healthyMenuCell
-        
-        var priceDoubleConversion = String(healthy[indexPath.row].price)
 
          cell.healthyTextView.isEditable = false
         
-        cell.healthyTextView?.text = "Name: " + healthy[indexPath.row].name + "\n Description: " + healthy[indexPath.row].description + "\n Price: " + priceDoubleConversion
+        cell.healthyTextView?.text = drinks[indexPath.row].name + " \n$ " + drinks[indexPath.row].price.description
+        
+        //cell.healthyTextView?.text = menuItems[indexPath.row].name + " \n$ " + menuItems[indexPath.row].price.description
+        //menuItem array isnt getting data loaded in right. Not sure why
+        
+        //print(drinks[indexPath.row].price.description) just to test that you can print a float using description
         return cell
     }
 
@@ -119,16 +189,14 @@ class HealthyTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let cell = sender as! UITableViewCell
+       let cell = sender as! UITableViewCell
         let indexPath = self.tableView.indexPath(for: cell)
-        
-        let food = healthy[indexPath!.row].name
-        let description = healthy[indexPath!.row].description
-        let price = String(healthy[indexPath!.row].price)
         
         
         let viewController = segue.destination as! HealthyViewController
-        viewController.testText = food + "\n Description: " + description + "\n Price " + price
+        viewController.testText = drinks[indexPath!.row].name + "\n$ " + drinks[indexPath!.row].price.description
+        
+        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }

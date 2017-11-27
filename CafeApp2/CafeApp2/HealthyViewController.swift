@@ -11,14 +11,14 @@ import UIKit
 class HealthyViewController: UIViewController {
     
     
-    @IBOutlet weak var testTextLabel: UILabel!
+    @IBOutlet weak var testTextView: UITextView!
     
     var testText = "blank"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        testTextLabel?.text = testText
+        testTextView?.text = testText
         self.title = "Menu Item Display"
         
         // Do any additional setup after loading the view.
