@@ -20,13 +20,15 @@ class UnhealthyTableViewController: UITableViewController {
     
         var unhealthy = Array<MenuItem>()
         var unhealthyItem1 = MenuItem(name: "pancakes", description: "Light and fluffy", image: UIImage(), price: 9.99, timeStore: 999)
+            var unhealthyItem2 = MenuItem(name: "Coffee", description: "black", image: UIImage(), price: 1.75, timeStore: 999)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Cafe at Eckles Menu"
         
         
-        unhealthy.append(unhealthyItem1)
+        unhealthy = [unhealthyItem1, unhealthyItem2]
+
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -128,8 +130,8 @@ class UnhealthyTableViewController: UITableViewController {
         let viewController = segue.destination as! UnhealthyViewController
         viewController.testText = food + "\n Description: " + description// + "\n Price " + price
         
-        //viewController.testFood = food    --Uncomment if you need these for text labels instead of one text field--
-        //viewController.testDescription = description
+        viewController.testFood = food   // --Uncomment if you need these for text labels instead of one text field--
+        viewController.testDescription = description
         viewController.testPrice = price
         
         viewController.unhealthyItem1 = unhealthyItem1

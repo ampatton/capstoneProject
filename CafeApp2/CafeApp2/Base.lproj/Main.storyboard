@@ -197,7 +197,7 @@
                                 <rect key="frame" x="173" y="487" width="30" height="30"/>
                                 <state key="normal" title="Buy"/>
                                 <connections>
-                                    <segue destination="Rc1-Gu-pEc" kind="show" id="4Kg-Bw-dBk"/>
+                                    <segue destination="Kqy-tb-4DL" kind="show" id="g41-zD-jWn"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g78-7l-T5J">
@@ -225,6 +225,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C6u-1O-7Pd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2660" y="339.58020989505252"/>
+        </scene>
+        <!--Shopping Cart View Controller-->
+        <scene sceneID="aIN-DJ-8Lh">
+            <objects>
+                <viewController id="Kqy-tb-4DL" customClass="ShoppingCartViewController" customModule="CafeApp2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zsc-1s-2eC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shopping Cart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHA-41-l1T">
+                                <rect key="frame" x="132" y="38" width="111" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3DZ-8e-OJO">
+                                <rect key="frame" x="67" y="165" width="240" height="333"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ios-iL-BFi">
+                                <rect key="frame" x="267" y="575" width="93" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Finalize order"/>
+                                <connections>
+                                    <segue destination="Rc1-Gu-pEc" kind="show" id="bgQ-CI-fsQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0MP-zP-RAF">
+                                <rect key="frame" x="40" y="575" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Clear cart"/>
+                                <connections>
+                                    <action selector="clearCartPressed:" destination="Kqy-tb-4DL" eventType="touchUpInside" id="1Jf-BF-dBA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLO-Xv-i1P">
+                                <rect key="frame" x="134" y="575" width="106" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Return to Menu"/>
+                                <connections>
+                                    <segue destination="HBJ-Jd-ZB7" kind="show" id="QjA-Or-6sL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="M8A-X2-HW3"/>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="3DZ-8e-OJO" id="krW-gu-pqu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TQ2-QW-fFu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3484" y="339.58020989505252"/>
         </scene>
         <!--Survey View Controller-->
         <scene sceneID="38T-FO-T0G">
@@ -310,7 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZwW-SQ-0YM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3424.8000000000002" y="339.58020989505252"/>
+            <point key="canvasLocation" x="4282" y="322"/>
         </scene>
         <!--Survey2 View Controller-->
         <scene sceneID="Ifs-Q4-26V">
@@ -359,7 +418,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tWE-87-g0k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4208.8000000000002" y="340.47976011994007"/>
+            <point key="canvasLocation" x="5046" y="322"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bow-23-HxV">
@@ -399,6 +458,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="t1M-Zy-EGj"/>
+        <segue reference="QjA-Or-6sL"/>
     </inferredMetricsTieBreakers>
 </document>

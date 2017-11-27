@@ -17,8 +17,8 @@ class UnhealthyViewController: UIViewController {
     @IBOutlet weak var timerLabelTest: UILabel!
     
     var testText = "wrong text"
-    //var testFood = "Wrong  food"   --Uncomment if you need these for text labels instead of one text field--
-    //var testDescription = "Wrong description"
+    var testFood = "Wrong  food"  // --Uncomment if you need these for text labels instead of one text field--
+    var testDescription = "Wrong description"
     var testPrice = "Wrong price"
     
     var unhealthyItem1 = MenuItem(name: "wrong name", description: "wrong description", image: UIImage(), price: 9.99, timeStore: 0)
@@ -31,6 +31,7 @@ class UnhealthyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         runTimer()
         
@@ -57,9 +58,17 @@ class UnhealthyViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+        let viewController = segue.destination as! ShoppingCartViewController
+        viewController.foodsInCart.append(testFood + "\n Description: " + testDescription + "\n Price " + testPrice) //why is this string not actually getting appended
+        
         unhealthyItem1.timeStore = seconds
+        
+        
+        
         print(seconds)       //These print statements are just to test that the right data is being recorded
-        print(unhealthyItem1.description)
+        //print(unhealthyItem1.description)
         
         
         // Get the new view controller using segue.destinationViewController.
