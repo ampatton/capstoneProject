@@ -9,6 +9,7 @@
 import UIKit
 
 class Survey2ViewController: UIViewController {
+
     
     var surveyBoolean: Bool = false
     

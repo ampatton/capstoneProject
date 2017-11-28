@@ -61,13 +61,13 @@ class UnhealthyViewController: UIViewController {
         
         
         let viewController = segue.destination as! ShoppingCartViewController
-        viewController.foodsInCart.append(testFood + "\n Description: " + testDescription + "\n Price " + testPrice) //why is this string not actually getting appended
+     shoppingCart.foodsInCart.append(testFood + "\n Description: " + testDescription + "\n Price " + testPrice + "\n\n")
+        shoppingCart.timeToOrder += seconds
+        //pretty sure you still need a prepareForSegue so you can get the proper time from the timer (need the time when the segue is pressed)
         
-        unhealthyItem1.timeStore = seconds
         
         
-        
-        print(seconds)       //These print statements are just to test that the right data is being recorded
+        print("Time for this page: " + seconds.description + "\nTime for total pages on this order:" + shoppingCart.timeToOrder.description)       //These print statements are just to test that the right data is being recorded
         //print(unhealthyItem1.description)
         
         

@@ -254,7 +254,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Finalize order"/>
                                 <connections>
-                                    <segue destination="Rc1-Gu-pEc" kind="show" id="bgQ-CI-fsQ"/>
+                                    <segue destination="pzv-ei-f3Y" kind="show" id="P9c-lG-H8E"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0MP-zP-RAF">
@@ -268,7 +268,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLO-Xv-i1P">
                                 <rect key="frame" x="134" y="575" width="106" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Return to Menu"/>
+                                <state key="normal" title="Return to menu"/>
                                 <connections>
                                     <segue destination="HBJ-Jd-ZB7" kind="show" id="QjA-Or-6sL"/>
                                 </connections>
@@ -369,7 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZwW-SQ-0YM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4282" y="322"/>
+            <point key="canvasLocation" x="4260" y="-226"/>
         </scene>
         <!--Survey2 View Controller-->
         <scene sceneID="Ifs-Q4-26V">
@@ -458,6 +458,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="P9c-lG-H8E"/>
         <segue reference="QjA-Or-6sL"/>
     </inferredMetricsTieBreakers>
 </document>

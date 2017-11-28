@@ -8,17 +8,21 @@
 
 import UIKit
 
+struct shoppingCart{
+    static var foodsInCart = " " //this data is in a struct so it will persist when a new view controller is accessed. also, i dont want to make a singleton just for this
+    static var timeToOrder = 0
+}
+
 class ShoppingCartViewController: UIViewController {
 
     @IBOutlet weak var textView: UITextView!
-    
-    var foodsInCart = String()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(foodsInCart)
+        print(shoppingCart.foodsInCart)
 
-        textView.text = foodsInCart
+        textView.text = shoppingCart.foodsInCart
         textView.isEditable = false
         
         // Do any additional setup after loading the view.
@@ -31,6 +35,8 @@ class ShoppingCartViewController: UIViewController {
     
     @IBAction func clearCartPressed(_ sender: Any) {
         textView.text = " "
+        shoppingCart.foodsInCart = " "
+        shoppingCart.timeToOrder = 0
     }
     
     /*
