@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class UnhealthyViewController: UIViewController {
+class UnhealthyViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
     @IBOutlet weak var testTextLabel: UILabel!
     
@@ -57,6 +58,18 @@ class UnhealthyViewController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(UnhealthyViewController.updateTimer)), userInfo: nil, repeats: true)
     }
     
+    func showSendMailErrorAlert() {
+        let sendMailErrorAlert = UIAlertView(title: "Could not send order e-mail", message: "This device could not send the e-mail", delegate: self, cancelButtonTitle: "Ok")
+        sendMailErrorAlert.show()
+        //when in simulation mode, once you choose a food item, this error will pop on the next viewcontroller
+        //have to figure a way to make the mail composing to happen after the order has been processed
+        //idea: linking the email fxn on a UIButton ("Finalize Order" Button)
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         
@@ -64,21 +77,40 @@ class UnhealthyViewController: UIViewController {
      shoppingCart.foodsInCart.append(testFood + "\n Description: " + testDescription + "\n Price " + testPrice + "\n\n")
         shoppingCart.timeToOrder += seconds
         //pretty sure you still need a prepareForSegue so you can get the proper time from the timer (need the time when the segue is pressed)
+        //dont know what this comment is for exactly ^^^
         
+        let mailComposeViewController = configuredMailComposeViewController()
         
+        if MFMailComposeViewController.canSendMail() {
+            self.present(mailComposeViewController, animated: true, completion: nil)
+        } else {
+            self.showSendMailErrorAlert()
+        }
+    }
+    func configuredMailComposeViewController() -> MFMailComposeViewController {
+        let mailComposerVC = MFMailComposeViewController()
         
-        print("Time for this page: " + seconds.description + "\nTime for total pages on this order:" + shoppingCart.timeToOrder.description)       //These print statements are just to test that the right data is being recorded
-        //print(unhealthyItem1.description)
+        mailComposerVC.mailComposeDelegate = self
+        mailComposerVC.setToRecipients(["leovankim@gmail.com"])
+        mailComposerVC.setSubject("New Order")
+        mailComposerVC.setMessageBody("This is an example", isHTML: false)
         
-        
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        return mailComposerVC
     }
     
     
+//        print("Time for this page: " + seconds.description + "\nTime for total pages on this order:" + shoppingCart.timeToOrder.description)       //These print statements are just to test that the right data is being recorded
+//        //print(unhealthyItem1.description)
+//
+//
+//        // Get the new view controller using segue.destinationViewController.
+//        // Pass the selected object to the new view controller.
+    }
+
     
     
-}
+    
+
 
 
 
