@@ -22,6 +22,10 @@ struct drinkStruct{
     let price : Double!
 }
 
+struct DBConfigured {
+     static var configuredBool: Bool = false //Needed to make it a struct so its global. Otherwise, when you go back to the table view controller after already being it it, it gets configured twice and crashes the program
+}
+
 struct menuItemStruct{
     var name = ""
     var calories = 0
@@ -59,16 +63,15 @@ class HealthyTableViewController: UITableViewController {
     var menuItems = [menuItemStruct]()
     var arrayIndex = Int()
     var ref:DatabaseReference?
-    var configuredBool: Bool = false
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if(configuredBool == false){
+        if(DBConfigured.configuredBool == false){
             FirebaseApp.configure()
-            configuredBool = true
+            DBConfigured.configuredBool = true
         }
         
         self.title = "Cafe at Eckles Menu"
@@ -337,7 +340,12 @@ class HealthyTableViewController: UITableViewController {
         
         let viewController = segue.destination as! HealthyViewController
         //viewController.testText = drinks[indexPath!.row].name + "\n$ " + drinks[indexPath!.row].price.description
-        viewController.testText = menuItems[indexPath!.row].name + "\n$ " + menuItems[indexPath!.row].price.description
+        viewController.testText = "Name: " + menuItems[indexPath!.row].name + "\nPrice: $" + menuItems[indexPath!.row].price.description + "\nDescription: " + menuItems[indexPath!.row].description + "\nCalories: " + menuItems[indexPath!.row].calories.description + "\nCarbohydrates: " + menuItems[indexPath!.row].carbohydrate.description + " grams\nFat: " + menuItems[indexPath!.row].fat.description + " grams\nCholesterol: " + menuItems[indexPath!.row].cholesterol.description + " grams\nSodium: " + menuItems[indexPath!.row].sodium.description + " grams\nProtein: " + menuItems[indexPath!.row].protein.description + " grams"
+        
+        viewController.testFood = menuItems[indexPath!.row].name
+        viewController.testDescription = menuItems[indexPath!.row].description
+        viewController.testPrice = menuItems[indexPath!.row].price.description
+        
         
         
         // Get the new view controller using segue.destinationViewController.

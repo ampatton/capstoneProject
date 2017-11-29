@@ -1,30 +1,21 @@
 //
-//  ShoppingCartViewController.swift
+//  HealthySurveyViewController.swift
 //  CafeApp2
 //
-//  Created by Austin Patton on 11/27/17.
+//  Created by Austin Patton on 11/29/17.
 //  Copyright © 2017 Austin Patton. All rights reserved.
 //
 
 import UIKit
 
-struct unhealthyShoppingCart{
-    static var foodsInCart = " " //this data is in a struct so it will persist when a new view controller is accessed. also, i dont want to make a singleton just for this
-    static var timeToOrder = 0
-}
+class HealthySurveyViewController: UIViewController {
 
-class ShoppingCartViewController: UIViewController {
-
-    @IBOutlet weak var textView: UITextView!
+    var surveyBoolean: Bool = false  //In case the owner wants to prevent them from finishing without taking the survey
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(unhealthyShoppingCart.foodsInCart)
 
-        textView.text = unhealthyShoppingCart.foodsInCart
-        textView.isEditable = false
-        
         // Do any additional setup after loading the view.
     }
 
@@ -33,10 +24,10 @@ class ShoppingCartViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func clearCartPressed(_ sender: Any) {
-        textView.text = " "
-        unhealthyShoppingCart.foodsInCart = " "
-        unhealthyShoppingCart.timeToOrder = 0
+  
+    @IBAction func surveyButtonPressed(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://missouri.qualtrics.com/jfe/form/SV_0rEzTGyFxy6ccVn")! as URL, options: [:], completionHandler: nil)
+        surveyBoolean = true
     }
     
     /*

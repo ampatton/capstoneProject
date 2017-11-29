@@ -1,31 +1,29 @@
 //
-//  ShoppingCartViewController.swift
+//  HealthyShoppingCartViewController.swift
 //  CafeApp2
 //
-//  Created by Austin Patton on 11/27/17.
+//  Created by Austin Patton on 11/29/17.
 //  Copyright © 2017 Austin Patton. All rights reserved.
 //
 
 import UIKit
 
-struct unhealthyShoppingCart{
+struct healthyShoppingCart{
     static var foodsInCart = " " //this data is in a struct so it will persist when a new view controller is accessed. also, i dont want to make a singleton just for this
     static var timeToOrder = 0
 }
 
-class ShoppingCartViewController: UIViewController {
+class HealthyShoppingCartViewController: UIViewController {
 
     @IBOutlet weak var textView: UITextView!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(unhealthyShoppingCart.foodsInCart)
 
-        textView.text = unhealthyShoppingCart.foodsInCart
-        textView.isEditable = false
-        
         // Do any additional setup after loading the view.
+
+        textView.text = healthyShoppingCart.foodsInCart
+        textView.isEditable = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,10 +31,11 @@ class ShoppingCartViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func clearCartPressed(_ sender: Any) {
+
+    @IBAction func clearCart(_ sender: Any) {
         textView.text = " "
-        unhealthyShoppingCart.foodsInCart = " "
-        unhealthyShoppingCart.timeToOrder = 0
+        healthyShoppingCart.foodsInCart = " "
+        healthyShoppingCart.timeToOrder = 0
     }
     
     /*

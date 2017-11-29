@@ -11,7 +11,7 @@ import UIKit
 class Survey2ViewController: UIViewController {
 
     
-    var surveyBoolean: Bool = false
+    var surveyBoolean: Bool = false //In case the owner wants to prevent them from finishing without taking the survey
     
     override func viewDidLoad() {
         super.viewDidLoad()
