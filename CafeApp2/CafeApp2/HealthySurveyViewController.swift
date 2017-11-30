@@ -30,6 +30,11 @@ class HealthySurveyViewController: UIViewController {
         surveyBoolean = true
     }
     
+    @IBAction func doneButtonPressed(_ sender: Any) {
+        _ = navigationController?.popToRootViewController(animated: true)
+    }
+    
+    
     /*
     // MARK: - Navigation
 

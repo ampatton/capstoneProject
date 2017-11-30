@@ -39,6 +39,12 @@ class ShoppingCartViewController: UIViewController {
         unhealthyShoppingCart.timeToOrder = 0
     }
     
+
+    @IBAction func returnToMenu(_ sender: Any) {
+        _ = navigationController?.popToRootViewController(animated: true)
+    }
+    
+    
     /*
     // MARK: - Navigation
 

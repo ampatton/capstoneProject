@@ -31,6 +31,9 @@ class Survey2ViewController: UIViewController {
     }
     
     
+    @IBAction func doneButtonPressed(_ sender: Any) {
+        _ = navigationController?.popToRootViewController(animated: true)
+    }
     /*
     // MARK: - Navigation
 

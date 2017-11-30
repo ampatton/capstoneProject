@@ -31,7 +31,11 @@ class HealthyShoppingCartViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func returnToMenu(_ sender: Any) {
+        _ = navigationController?.popToRootViewController(animated: true)//i dont really understand how this works, but it does
+    }
+    
+    
     @IBAction func clearCart(_ sender: Any) {
         textView.text = " "
         healthyShoppingCart.foodsInCart = " "

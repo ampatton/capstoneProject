@@ -64,6 +64,7 @@ class HealthyTableViewController: UITableViewController {
     var arrayIndex = Int()
     var ref:DatabaseReference?
     
+    //var dictionaryArray = [[String: AnyObject]]()
     
     
     override func viewDidLoad() {
@@ -74,7 +75,7 @@ class HealthyTableViewController: UITableViewController {
             DBConfigured.configuredBool = true
         }
         
-        self.title = "Cafe at Eckles Menu"
+        self.title = "Cafe at Eckles Menu"//self.pop to root navigation controller
         
         loadDrinks()
         loadSides()//these arent getting called in order. Not sure why
@@ -83,8 +84,9 @@ class HealthyTableViewController: UITableViewController {
         loadSandwiches()
         loadSoupsSalads()
         
+        //printArray()
     
-
+    
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -104,6 +106,14 @@ class HealthyTableViewController: UITableViewController {
         let databaseRef = Database.database().reference()
         
         databaseRef.child("Posts").childByAutoId().setValue(post)
+    }
+    
+    func printArray(){
+         print("THIS IS THE ARRAYS CONTENTS --------------\n\n")//this is for an in progress way to add sections to the device
+        
+        for menuItemStruct in menuItems{
+        print(menuItemStruct)
+        }
     }
     
     func loadDrinks () {//<--------------------Once the database is fixed, take out coffee so it reads the drinks category
@@ -188,7 +198,6 @@ class HealthyTableViewController: UITableViewController {
             //let name = snapshot.value!["name"]
             
             
-            
             print("------------------------------------------------------")
             self.tableView.reloadData()
         })
@@ -271,7 +280,7 @@ class HealthyTableViewController: UITableViewController {
 
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 6
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
