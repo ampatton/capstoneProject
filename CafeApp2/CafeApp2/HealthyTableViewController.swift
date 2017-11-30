@@ -77,11 +77,14 @@ class HealthyTableViewController: UITableViewController {
         
         self.title = "Cafe at Eckles Menu"//self.pop to root navigation controller
         
+        loadSandwiches()
+        //printArray(completion:loadSandwiches()) //dont understand why im getting an error here. It returns void and has void parameters
+        
         loadDrinks()
         loadSides()//these arent getting called in order. Not sure why
         loadGrill()
         loadWraps()
-        loadSandwiches()
+        //loadSandwiches()
         loadSoupsSalads()
         
         //printArray()
@@ -108,12 +111,13 @@ class HealthyTableViewController: UITableViewController {
         databaseRef.child("Posts").childByAutoId().setValue(post)
     }
     
-    func printArray(){
+    func printArray(completion: ()->()){
          print("THIS IS THE ARRAYS CONTENTS --------------\n\n")//this is for an in progress way to add sections to the device
         
         for menuItemStruct in menuItems{
         print(menuItemStruct)
         }
+        completion()
     }
     
     func loadDrinks () {//<--------------------Once the database is fixed, take out coffee so it reads the drinks category

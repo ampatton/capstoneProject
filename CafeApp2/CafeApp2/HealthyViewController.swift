@@ -25,7 +25,6 @@ class HealthyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         runTimer()
         
         testTextView?.text = testText
@@ -52,7 +51,7 @@ class HealthyViewController: UIViewController {
         
         
         let viewController = segue.destination as! HealthyShoppingCartViewController
-        healthyShoppingCart.foodsInCart.append(testFood + "\n Description: " + testDescription + "\n Price " + testPrice + "\n\n")
+        healthyShoppingCart.foodsInCart.append(testFood + "\n Price " + testPrice + "\n\n")
         healthyShoppingCart.timeToOrder += seconds
         
         //pretty sure you still need a prepareForSegue so you can get the proper time from the timer (need the time when the segue is pressed)

@@ -18,26 +18,197 @@ class unhealthyMenuCell: UITableViewCell{
 class UnhealthyTableViewController: UITableViewController {
 
     
-        var unhealthy = Array<MenuItem>()
+        /*var unhealthy = Array<MenuItem>()
         var unhealthyItem1 = MenuItem(name: "pancakes", description: "Light and fluffy", image: UIImage(), price: 9.99, timeStore: 999)
-            var unhealthyItem2 = MenuItem(name: "Coffee", description: "black", image: UIImage(), price: 1.75, timeStore: 999)
+            var unhealthyItem2 = MenuItem(name: "Coffee", description: "black", image: UIImage(), price: 1.75, timeStore: 999)*/
+    var drinks = [drinkStruct]()
+    var menuItems = [menuItemStruct]()
+    var arrayIndex = Int()
+    var ref:DatabaseReference?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Cafe at Eckles Menu"
+        
+        if(DBConfigured.configuredBool == false){
+            FirebaseApp.configure()
+            DBConfigured.configuredBool = true
+        }
+        
+        self.title = "Cafe at Eckles Menu"//self.pop to root navigation controller
+        
+        loadDrinks()
+        loadSides()//these arent getting called in order. Not sure why
+        loadGrill()
+        loadWraps()
+        loadSandwiches()
+        loadSoupsSalads()
+        
+        //printArray()
         
         
-        unhealthy = [unhealthyItem1, unhealthyItem2]
-
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
-        post ()
     }
+    
+    func loadDrinks () {//<--------------------Once the database is fixed, take out coffee so it reads the drinks category
+        ref = Database.database().reference()
+        
+        ref?.child("menu_items").child("Drinks").child("coffee").observeSingleEvent(of: .value, with: {(snapshot) in//takes a snapshot of the items within the database structure of menu_items - > Drinks -> what its taking a snapshot of
+            print (snapshot)
+            //let name = snapshot.value!["name"]
+            let dict = snapshot.value as? NSDictionary, name = dict!["name"] as? String, price = dict!["price"] as? Double
+            
+            
+            print (dict)
+            
+            self.menuItems.insert(menuItemStruct(name: name!, price: price!), at: self.arrayIndex)
+            self.arrayIndex += 1
+            //self.drinks.insert(drinkStruct(name: name, price: price ), at: 0)
+            
+            self.tableView.reloadData()
+        })
+    }
+    
+    func loadSandwiches(){//ALL OF THE MENU ITEMS HAVE THE SAME LOADING FUNCTIONS MINUS DRINKS (they just access a different child dictionary) WHICH IS WHY EACH DICTIONARY HAS TO HAVE ITS OWN FUNCTION
+        ref = Database.database().reference()
+        
+        ref?.child("menu_items").child("sandwiches").observeSingleEvent(of: .value, with: {(snapshot) in
+            print (snapshot)
+            
+            for (key, dict) in snapshot.value as? NSDictionary ?? [:] {
+                let dict = dict as? NSDictionary
+                
+                let calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Double, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int
+                
+                self.menuItems.insert(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium! ), at: self.arrayIndex)
+                self.arrayIndex += 1
+            }
+            //let name = snapshot.value!["name"]
+            
+            
+            
+            print("------------------------------------------------------")
+            self.tableView.reloadData()
+        })
+    }
+    
+    func loadWraps(){
+    ref = Database.database().reference()
+    
+    ref?.child("menu_items").child("Wraps").observeSingleEvent(of: .value, with: {(snapshot) in
+    print (snapshot)
+    
+    for (key, dict) in snapshot.value as? NSDictionary ?? [:] {
+    let dict = dict as? NSDictionary
+    
+    let calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Double, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int
+    
+    self.menuItems.insert(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium! ), at: self.arrayIndex)
+    self.arrayIndex += 1
+    }
+    //let name = snapshot.value!["name"]
+    
+    
+    
+    print("------------------------------------------------------")
+    self.tableView.reloadData()
+    })
+    }
+    
+    func loadGrill(){
+        ref = Database.database().reference()
+        
+        ref?.child("menu_items").child("grill").observeSingleEvent(of: .value, with: {(snapshot) in
+            print (snapshot)
+            
+            for (key, dict) in snapshot.value as? NSDictionary ?? [:] {
+                let dict = dict as? NSDictionary
+                
+                let calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Double, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int
+                
+                self.menuItems.insert(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium! ), at: self.arrayIndex)
+                self.arrayIndex += 1
+            }
+            //let name = snapshot.value!["name"]
+            
+            
+            print("------------------------------------------------------")
+            self.tableView.reloadData()
+        })
+    }
+    
+    func loadSoupsSalads(){
+        ref = Database.database().reference()
+        
+        ref?.child("menu_items").child("soups_salads").observeSingleEvent(of: .value, with: {(snapshot) in
+            print (snapshot)
+            
+            for (key, dict) in snapshot.value as? NSDictionary ?? [:] {
+                let dict = dict as? NSDictionary
+                
+                let calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Double, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int
+                
+                self.menuItems.insert(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium! ), at: self.arrayIndex)
+                self.arrayIndex += 1
+            }
+            //let name = snapshot.value!["name"]
+            
+            
+            
+            print("------------------------------------------------------")
+            self.tableView.reloadData()
+        })
+    }
+    
+    func loadSides(){
+        ref = Database.database().reference()
+        
+        ref?.child("menu_items").child("Sides").observeSingleEvent(of: .value, with: {(snapshot) in
+            print (snapshot)
+            
+            for (key, dict) in snapshot.value as? NSDictionary ?? [:] {
+                let dict = dict as? NSDictionary
+                
+                let calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Double, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int
+                
+                self.menuItems.insert(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium! ), at: self.arrayIndex)
+                self.arrayIndex += 1
+            }
+            //let name = snapshot.value!["name"]
+            
+            
+            
+            print("------------------------------------------------------")
+            self.tableView.reloadData()
+        })
+    }
+    
+    func loadOther(){
+        ref = Database.database().reference()
+        
+        ref?.child("menu_items").child("Other").observeSingleEvent(of: .value, with: {(snapshot) in
+            print (snapshot)
+            
+            for (key, dict) in snapshot.value as? NSDictionary ?? [:] {
+                let dict = dict as? NSDictionary
+                
+                let calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Double, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int
+                
+                self.menuItems.insert(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium! ), at: self.arrayIndex)
+                self.arrayIndex += 1
+            }
+            //let name = snapshot.value!["name"]
+            
+            
+            
+            print("------------------------------------------------------")
+            self.tableView.reloadData()
+        })
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -53,7 +224,7 @@ class UnhealthyTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return unhealthy.count
+        return menuItems.count
     }
     
     func post(){
@@ -74,11 +245,8 @@ class UnhealthyTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "unhealthyMenuChoiceCell", for: indexPath) as! unhealthyMenuCell
         
-        let priceDoubleConversion = String(unhealthy[indexPath.row].price)
-        
-        cell.unhealthyTextView?.text = "Name: " + unhealthy[indexPath.row].name + "\nDescription: " + unhealthy[indexPath.row].description + "\n Price: " + priceDoubleConversion
-        
         cell.unhealthyTextView.isEditable = false
+        cell.unhealthyTextView?.text = menuItems[indexPath.row].name + " \n$ " + menuItems[indexPath.row].price.description
         
         return cell
     }
@@ -122,19 +290,13 @@ class UnhealthyTableViewController: UITableViewController {
         let cell = sender as! UITableViewCell
         let indexPath = self.tableView.indexPath(for: cell)
         
-        let food = unhealthy[indexPath!.row].name
-        let description = unhealthy[indexPath!.row].description
-        let price = String(unhealthy[indexPath!.row].price)
-        
         
         let viewController = segue.destination as! UnhealthyViewController
-        viewController.testText = food + "\n Description: " + description// + "\n Price " + price
+        //viewController.testText = drinks[indexPath!.row].name + "\n$ " + drinks[indexPath!.row].price.description
         
-        viewController.testFood = food   // --Uncomment if you need these for text labels instead of one text field--
-        viewController.testDescription = description
-        viewController.testPrice = price
-        
-        viewController.unhealthyItem1 = unhealthyItem1
+        viewController.testFood = menuItems[indexPath!.row].name
+        viewController.testDescription = menuItems[indexPath!.row].description
+        viewController.testPrice = menuItems[indexPath!.row].price.description
         
         
         // Get the new view controller using segue.destinationViewController.

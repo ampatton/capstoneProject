@@ -9,15 +9,15 @@
 import UIKit
 
 class UnhealthyViewController: UIViewController {
-
-    @IBOutlet weak var testTextLabel: UILabel!
     
     @IBOutlet weak var testTextButton: UIButton!
+    @IBOutlet weak var testTextView: UITextView!
+    @IBOutlet weak var foodNameLabel: UILabel!
+    @IBOutlet weak var foodPriceLabel: UILabel!
     
-    @IBOutlet weak var timerLabelTest: UILabel!
     
-    var testText = "wrong text"
-    var testFood = "Wrong  food"  // --Uncomment if you need these for text labels instead of one text field--
+    var testText = "wrong text"//use this if you go back to using a whole text view for all of them instead of labels
+    var testFood = "Wrong  food"
     var testDescription = "Wrong description"
     var testPrice = "Wrong price"
     
@@ -34,9 +34,9 @@ class UnhealthyViewController: UIViewController {
         
         
         runTimer()
-        
-        testTextLabel?.text = testText
-        testTextButton.setTitle(testPrice, for: .normal)
+        foodNameLabel.text = testFood
+        foodPriceLabel.text = testPrice
+        testTextView?.text = testDescription
         
         self.title = "Menu Item Display"
         
@@ -50,7 +50,7 @@ class UnhealthyViewController: UIViewController {
     
     @objc func updateTimer() {
         seconds += 1
-        timerLabelTest.text = "\(seconds)"
+        //timerLabelTest.text = "\(seconds)" in case you need a label that displays the time
     }
     
     func runTimer() {
@@ -61,7 +61,7 @@ class UnhealthyViewController: UIViewController {
         
         
         let viewController = segue.destination as! ShoppingCartViewController
-     unhealthyShoppingCart.foodsInCart.append(testFood + "\n Description: " + testDescription + "\n Price " + testPrice + "\n\n")
+     unhealthyShoppingCart.foodsInCart.append(testFood + "\n Price " + testPrice + "\n\n")
         unhealthyShoppingCart.timeToOrder += seconds
         //pretty sure you still need a prepareForSegue so you can get the proper time from the timer (need the time when the segue is pressed)
         
