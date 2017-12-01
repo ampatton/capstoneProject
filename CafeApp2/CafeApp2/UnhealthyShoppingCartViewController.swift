@@ -13,7 +13,7 @@ struct unhealthyShoppingCart{
     static var timeToOrder = 0
 }
 
-class ShoppingCartViewController: UIViewController {
+class UnhealthyShoppingCartViewController: UIViewController {
 
     @IBOutlet weak var textView: UITextView!
 

@@ -250,7 +250,7 @@
                                 <rect key="frame" x="155" y="280" width="213" height="225"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -399,10 +399,10 @@
             </objects>
             <point key="canvasLocation" x="4503" y="-367"/>
         </scene>
-        <!--Shopping Cart View Controller-->
+        <!--Unhealthy Shopping Cart View Controller-->
         <scene sceneID="aIN-DJ-8Lh">
             <objects>
-                <viewController id="Kqy-tb-4DL" customClass="ShoppingCartViewController" customModule="CafeApp2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Kqy-tb-4DL" customClass="UnhealthyShoppingCartViewController" customModule="CafeApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zsc-1s-2eC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -591,10 +591,10 @@
             </objects>
             <point key="canvasLocation" x="883.20000000000005" y="341.82908545727139"/>
         </scene>
-        <!--Survey2 View Controller-->
+        <!--Unhealthy Survey View Controller-->
         <scene sceneID="wyb-d2-F3g">
             <objects>
-                <viewController id="bph-MS-0QC" customClass="Survey2ViewController" customModule="CafeApp2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bph-MS-0QC" customClass="UnhealthySurveyViewController" customModule="CafeApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Eff-Sp-wVc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

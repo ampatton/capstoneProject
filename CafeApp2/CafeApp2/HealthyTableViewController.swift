@@ -60,7 +60,7 @@ struct menuItemStruct{
 class HealthyTableViewController: UITableViewController {
 
     var drinks = [drinkStruct]()
-    var menuItems = [menuItemStruct]()
+    private var menuItems = [menuItemStruct]()
     var arrayIndex = Int()
     var ref:DatabaseReference?
     
@@ -77,15 +77,50 @@ class HealthyTableViewController: UITableViewController {
         
         self.title = "Cafe at Eckles Menu"//self.pop to root navigation controller
         
-        loadSandwiches()
+        
+        
+        loadSoupsSalads(completionHandler: { items in
+            self.menuItems += items
+            self.loadSides(completionHandler: { items in
+                self.menuItems += items
+                self.loadWraps(completionHandler: { items in
+                    self.menuItems += items
+                    self.loadSandwiches(completionHandler: { items in
+                        self.menuItems += items
+                        self.loadGrill(completionHandler: { items in
+                            self.menuItems += items
+                            self.loadOther(completionHandler: { items in
+                                self.menuItems += items
+                                self.tableView.reloadData()
+                            })
+                        })
+                    })
+                })
+            })
+        })
+        
+        
+        
+        /*loadSoupsSalads(completionHandler: { items in
+            self.menuItems += items
+        })*/
+        
+        /*loadSides(completionHandler: { items in
+            self.menuItems += items
+        })*/
+        
+        
+        
+        
+        
         //printArray(completion:loadSandwiches()) //dont understand why im getting an error here. It returns void and has void parameters
         
-        loadDrinks()
-        loadSides()//these arent getting called in order. Not sure why
-        loadGrill()
-        loadWraps()
+        //loadDrinks()
+        //loadSides()You can load all of the items this way without completion handlers. However, they will be randomly ordered
+        //loadGrill()
+        //loadWraps()
         //loadSandwiches()
-        loadSoupsSalads()
+        //loadSoupsSalads()
         
         //printArray()
     
@@ -112,12 +147,12 @@ class HealthyTableViewController: UITableViewController {
     }
     
     func printArray(completion: ()->()){
+         completion()
          print("THIS IS THE ARRAYS CONTENTS --------------\n\n")//this is for an in progress way to add sections to the device
         
         for menuItemStruct in menuItems{
         print(menuItemStruct)
         }
-        completion()
     }
     
     func loadDrinks () {//<--------------------Once the database is fixed, take out coffee so it reads the drinks category
@@ -139,8 +174,10 @@ class HealthyTableViewController: UITableViewController {
         })
     }
     
-    func loadSandwiches(){//ALL OF THE MENU ITEMS HAVE THE SAME LOADING FUNCTIONS MINUS DRINKS (they just access a different child dictionary) WHICH IS WHY EACH DICTIONARY HAS TO HAVE ITS OWN FUNCTION
+    func loadSandwiches(completionHandler: @escaping ([menuItemStruct]) -> Void){//ALL OF THE MENU ITEMS HAVE THE SAME LOADING FUNCTIONS MINUS DRINKS (they just access a different child dictionary) WHICH IS WHY EACH DICTIONARY HAS TO HAVE ITS OWN FUNCTION
         ref = Database.database().reference()
+        
+        var items: [menuItemStruct] = []
         
         ref?.child("menu_items").child("sandwiches").observeSingleEvent(of: .value, with: {(snapshot) in
             print (snapshot)
@@ -150,20 +187,24 @@ class HealthyTableViewController: UITableViewController {
                 
                 let calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Double, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int
                 
-                self.menuItems.insert(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium! ), at: self.arrayIndex)
-                self.arrayIndex += 1
+                items.append(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium! ))
+                //self.arrayIndex += 1
+                
+               
             }
             //let name = snapshot.value!["name"]
             
-            
+            completionHandler(items)
             
             print("------------------------------------------------------")
             self.tableView.reloadData()
         })
     }
     
-    func loadWraps(){
+    func loadWraps(completionHandler: @escaping ([menuItemStruct]) -> Void){
         ref = Database.database().reference()
+        
+         var items: [menuItemStruct] = []
         
         ref?.child("menu_items").child("Wraps").observeSingleEvent(of: .value, with: {(snapshot) in
             print (snapshot)
@@ -173,20 +214,22 @@ class HealthyTableViewController: UITableViewController {
                 
                 let calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Double, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int
                 
-                self.menuItems.insert(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium! ), at: self.arrayIndex)
-                self.arrayIndex += 1
+                items.append(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium! ))
+                //self.arrayIndex += 1
             }
             //let name = snapshot.value!["name"]
             
-            
+            completionHandler(items)
             
             print("------------------------------------------------------")
             self.tableView.reloadData()
         })
     }
     
-    func loadGrill(){
+    func loadGrill(completionHandler: @escaping ([menuItemStruct]) -> Void){
         ref = Database.database().reference()
+        
+        var items: [menuItemStruct] = []
         
         ref?.child("menu_items").child("grill").observeSingleEvent(of: .value, with: {(snapshot) in
             print (snapshot)
@@ -196,19 +239,22 @@ class HealthyTableViewController: UITableViewController {
                 
                 let calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Double, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int
                 
-                self.menuItems.insert(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium! ), at: self.arrayIndex)
-                self.arrayIndex += 1
+                items.append(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium! ))
+                //self.arrayIndex += 1
             }
             //let name = snapshot.value!["name"]
             
+            completionHandler(items)
             
             print("------------------------------------------------------")
             self.tableView.reloadData()
         })
     }
     
-    func loadSoupsSalads(){
+    func loadSoupsSalads(completionHandler: @escaping ([menuItemStruct]) -> Void){
         ref = Database.database().reference()
+        
+        var items: [menuItemStruct] = []
         
         ref?.child("menu_items").child("soups_salads").observeSingleEvent(of: .value, with: {(snapshot) in
             print (snapshot)
@@ -218,20 +264,23 @@ class HealthyTableViewController: UITableViewController {
                 
                 let calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Double, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int
                 
-                self.menuItems.insert(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium! ), at: self.arrayIndex)
-                self.arrayIndex += 1
+                items.append(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium! ))
+                //self.arrayIndex += 1
             }
             //let name = snapshot.value!["name"]
             
             
+            completionHandler(items)
             
             print("------------------------------------------------------")
             self.tableView.reloadData()
         })
     }
     
-    func loadSides(){
+    func loadSides(completionHandler: @escaping ([menuItemStruct]) -> Void){
         ref = Database.database().reference()
+        
+        var items: [menuItemStruct] = []
         
         ref?.child("menu_items").child("Sides").observeSingleEvent(of: .value, with: {(snapshot) in
             print (snapshot)
@@ -241,21 +290,24 @@ class HealthyTableViewController: UITableViewController {
                 
                 let calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Double, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int
                 
-                self.menuItems.insert(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium! ), at: self.arrayIndex)
-                self.arrayIndex += 1
+                   items.append(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium! ))
+                //self.arrayIndex += 1
             }
             //let name = snapshot.value!["name"]
             
             
+            completionHandler(items)
             
             print("------------------------------------------------------")
             self.tableView.reloadData()
         })
     }
     
-    func loadOther(){
+    func loadOther(completionHandler: @escaping ([menuItemStruct]) -> Void){
         ref = Database.database().reference()
-        
+    
+    var items: [menuItemStruct] = []
+    
         ref?.child("menu_items").child("Other").observeSingleEvent(of: .value, with: {(snapshot) in
             print (snapshot)
             
@@ -264,12 +316,12 @@ class HealthyTableViewController: UITableViewController {
                 
                 let calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Double, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int
                 
-                self.menuItems.insert(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium! ), at: self.arrayIndex)
-                self.arrayIndex += 1
+                items.append(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium! ))
+                //self.arrayIndex += 1
             }
             //let name = snapshot.value!["name"]
             
-            
+            completionHandler(items)
             
             print("------------------------------------------------------")
             self.tableView.reloadData()
@@ -284,7 +336,7 @@ class HealthyTableViewController: UITableViewController {
 
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 6
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

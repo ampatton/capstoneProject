@@ -60,7 +60,7 @@ class UnhealthyViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         
-        let viewController = segue.destination as! ShoppingCartViewController
+        let viewController = segue.destination as! UnhealthyShoppingCartViewController
      unhealthyShoppingCart.foodsInCart.append(testFood + "\n Price " + testPrice + "\n\n")
         unhealthyShoppingCart.timeToOrder += seconds
         //pretty sure you still need a prepareForSegue so you can get the proper time from the timer (need the time when the segue is pressed)

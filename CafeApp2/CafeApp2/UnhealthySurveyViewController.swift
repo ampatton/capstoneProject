@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Survey2ViewController: UIViewController {
+class UnhealthySurveyViewController: UIViewController {
 
     
     var surveyBoolean: Bool = false //In case the owner wants to prevent them from finishing without taking the survey
