@@ -338,14 +338,35 @@ class HealthyTableViewController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if section == 0 {
-//            return 1
-//        }
+       /* if section == 1 {
+          return 3
+        }
+        else if section == 2 {
+            return 3
+        }
+        else if section == 3 {
+            return 2
+        }
+        else if section == 4 {
+            return 4
+        }
+        else if section == 5{
+            return 3
+        }
+        else if section == 6{
+            return 1
+        }
+        else {
+            return 0
+        }*/
+        
         
         return menuItems.count
     }
+    
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -392,6 +413,8 @@ class HealthyTableViewController: UITableViewController {
         return true
     }
     */
+    
+    
 
     
     // MARK: - Navigation
