@@ -32,7 +32,9 @@ class UnhealthySurveyViewController: UIViewController {
     
     
     @IBAction func doneButtonPressed(_ sender: Any) {
+        if(surveyBoolean == true){
         _ = navigationController?.popToRootViewController(animated: true)
+        }
     }
     /*
     // MARK: - Navigation
