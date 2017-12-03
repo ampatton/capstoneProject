@@ -104,7 +104,7 @@ class HealthyTableViewController: UITableViewController {
         })
         print("CHECKCHECKCHECKCHECK FOR THE foodItems ARRAY")
         print(foodItems)
-        //print checks for multiple sections
+        //print checks for multiple 
         
         /*loadSoupsSalads(completionHandler: { items in
             self.menuItems += items
