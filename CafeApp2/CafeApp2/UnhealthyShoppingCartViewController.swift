@@ -73,7 +73,7 @@ class UnhealthyShoppingCartViewController: UIViewController, MFMailComposeViewCo
         
         mailComposerVC.mailComposeDelegate = self
         //  mailComposerVC.setEditing(false, animated: true) //possible way to disable the editing. will try to get back to it and figure
-        mailComposerVC.setToRecipients(["austinpatton59@gmail.com"])
+        mailComposerVC.setToRecipients(["leovankim@gmail.com"])
         mailComposerVC.setSubject("New Order")
         mailComposerVC.setMessageBody(unhealthyShoppingCart.foodsInCart + "Total time spent analyzing:" + unhealthyShoppingCart.timeToOrder.description, isHTML: false)
         //is it posssible to make the messageBody read only?

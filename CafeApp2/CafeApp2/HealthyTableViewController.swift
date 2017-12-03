@@ -66,11 +66,10 @@ class HealthyTableViewController: UITableViewController {
     
     //var dictionaryArray = [[String: AnyObject]]()
     
-    //    let section = ["Soups and Salads", "Sides", "Wraps", "Sandwiches", "Grill"]
-    //creates the sections for the food items
-    //    let foodItems = [[loadSoupsSalads], [loadSides]]
-    //need to figure out how to grab the food items from each section.
-    
+    let section = ["Soups and Salads", "Sides", "Wraps", "Sandwiches", "Grill"]
+    let foodItems = [[loadSoupsSalads], [loadSides], [loadWraps], [loadSandwiches], [loadGrill]]
+    //checked w/ print statement and it loads as "[[(Function)], [(Function)]...etc]
+    //need to figure out a way to grab the items from each function rather than just calling the whole function
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,8 +102,9 @@ class HealthyTableViewController: UITableViewController {
                 })
             })
         })
-        
-        
+        print("CHECKCHECKCHECKCHECK FOR THE foodItems ARRAY")
+        print(foodItems)
+        //print checks for multiple sections
         
         /*loadSoupsSalads(completionHandler: { items in
             self.menuItems += items
