@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,12 +20,12 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CafeApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jn-q3-Ghy">
-                                <rect key="frame" x="95" y="223" width="185" height="33"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <rect key="frame" x="95" y="316" width="834" height="60"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="40"/>
                                 <state key="normal" title="MENU WITH CALORIES">
                                     <color key="titleColor" red="0.3201275468" green="0.58783757690000005" blue="0.83535039420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -34,14 +34,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAFE ECKLES MENU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUt-z4-kb5">
-                                <rect key="frame" x="16" y="20" width="343" height="82"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="35"/>
+                                <rect key="frame" x="16" y="20" width="992" height="183"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="59"/>
                                 <color key="textColor" red="0.3460870385" green="0.72674059869999996" blue="0.61573052409999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXr-0I-gvC">
-                                <rect key="frame" x="80" y="373" width="215" height="33"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <rect key="frame" x="111" y="436" width="803" height="60"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="40"/>
                                 <state key="normal" title="MENU WITHOUT CALORIES">
                                     <color key="titleColor" red="0.3201275468" green="0.58783757690000005" blue="0.83535039420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -54,42 +54,41 @@
                         <constraints>
                             <constraint firstItem="YUt-z4-kb5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="1wL-Pl-l0x"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YUt-z4-kb5" secondAttribute="bottom" constant="565" id="2lp-Hk-klT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Jn-q3-Ghy" secondAttribute="trailing" constant="95" id="6eV-x1-Xgq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YUt-z4-kb5" secondAttribute="trailing" constant="16" id="CcC-Eb-tmo"/>
-                            <constraint firstItem="3Jn-q3-Ghy" firstAttribute="top" secondItem="YUt-z4-kb5" secondAttribute="bottom" constant="121" id="FJY-Ed-eVt"/>
-                            <constraint firstItem="3Jn-q3-Ghy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="IQ5-6A-uWi"/>
                             <constraint firstItem="YUt-z4-kb5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LDH-XF-AzI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Jn-q3-Ghy" secondAttribute="trailing" constant="95" id="QRZ-xM-UnI"/>
-                            <constraint firstItem="OXr-0I-gvC" firstAttribute="top" secondItem="3Jn-q3-Ghy" secondAttribute="bottom" constant="117" id="THf-M4-Yd8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OXr-0I-gvC" secondAttribute="trailing" constant="80" id="TJa-TZ-nOx"/>
-                            <constraint firstItem="OXr-0I-gvC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="cxo-vb-6gP"/>
-                            <constraint firstItem="OXr-0I-gvC" firstAttribute="top" secondItem="3Jn-q3-Ghy" secondAttribute="bottom" constant="117" id="eAJ-Sd-MGo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OXr-0I-gvC" secondAttribute="bottom" constant="261" id="qYD-Dp-TUi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OXr-0I-gvC" secondAttribute="trailing" constant="110" id="bur-Bb-HpS"/>
+                            <constraint firstItem="OXr-0I-gvC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="eQ7-lS-sPD"/>
+                            <constraint firstItem="OXr-0I-gvC" firstAttribute="top" secondItem="3Jn-q3-Ghy" secondAttribute="bottom" constant="60" id="g4d-hi-9Pm"/>
+                            <constraint firstItem="3Jn-q3-Ghy" firstAttribute="top" secondItem="YUt-z4-kb5" secondAttribute="bottom" constant="113" id="igV-o2-mpQ"/>
+                            <constraint firstItem="3Jn-q3-Ghy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="qjz-FX-G4D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OXr-0I-gvC" secondAttribute="bottom" constant="272" id="vxN-9Q-fW8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10.4" y="2.2488755622188905"/>
+            <point key="canvasLocation" x="-10.546875" y="1.5625"/>
         </scene>
         <!--Healthy Table View Controller-->
         <scene sceneID="HZe-RG-Xvm">
             <objects>
                 <tableViewController id="N3n-BV-n4l" customClass="HealthyTableViewController" customModule="CafeApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yjd-kJ-djS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="healthyMenuChoiceCell" id="n1k-wa-L2L" customClass="healthyMenuCell" customModule="CafeApp2" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n1k-wa-L2L" id="N6m-2q-YFz">
-                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="986" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmV-J6-hc0">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="986" height="44"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -125,18 +124,18 @@
             <objects>
                 <viewController id="olo-bX-iux" customClass="HealthyViewController" customModule="CafeApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xJr-LP-gJa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kJl-0b-aeo">
-                                <rect key="frame" x="56" y="189" width="279" height="316"/>
+                                <rect key="frame" x="56" y="189" width="928" height="417"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3y-do-bHX">
-                                <rect key="frame" x="154" y="541" width="42" height="42"/>
+                                <rect key="frame" x="478.5" y="642" width="42" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Buy"/>
                                 <connections>
@@ -144,7 +143,7 @@
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F2z-Bj-krz">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="asfd" id="acM-Y4-tj7"/>
@@ -176,19 +175,19 @@
             <objects>
                 <tableViewController id="HBJ-Jd-ZB7" customClass="UnhealthyTableViewController" customModule="CafeApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Run-Ye-bot">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="unhealthyMenuChoiceCell" id="zgA-Jw-9bM" customClass="unhealthyMenuCell" customModule="CafeApp2" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zgA-Jw-9bM" id="y50-Io-TDN">
-                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="986" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yk3-xJ-qj8">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="986" height="44"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -224,11 +223,11 @@
             <objects>
                 <viewController id="4be-UO-isg" customClass="UnhealthyViewController" customModule="CafeApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JY0-aP-fNC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPl-yI-3HK">
-                                <rect key="frame" x="167" y="541" width="42" height="42"/>
+                                <rect key="frame" x="491" y="642" width="42" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Buy"/>
                                 <connections>
@@ -302,38 +301,38 @@
             <objects>
                 <viewController id="Xns-rw-QRo" customClass="HealthyShoppingCartViewController" customModule="CafeApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r4f-fT-pMC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shopping Cart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNT-aM-tO3">
-                                <rect key="frame" x="132" y="82" width="111" height="21"/>
+                                <rect key="frame" x="456.5" y="82" width="111" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Ub-g1-LTN">
-                                <rect key="frame" x="67" y="167" width="240" height="333"/>
+                                <rect key="frame" x="67" y="167" width="890" height="434"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYa-FG-0Kg">
-                                <rect key="frame" x="134" y="577" width="106" height="30"/>
+                                <rect key="frame" x="459" y="678" width="106" height="30"/>
                                 <state key="normal" title="Return to menu"/>
                                 <connections>
                                     <action selector="returnToMenu:" destination="Xns-rw-QRo" eventType="touchUpInside" id="owm-U0-feF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6Q-61-PGy">
-                                <rect key="frame" x="265" y="577" width="93" height="30"/>
+                                <rect key="frame" x="590" y="678" width="93" height="30"/>
                                 <state key="normal" title="Finalize order"/>
                                 <connections>
                                     <segue destination="bZ1-kI-e9h" kind="show" id="2w1-br-Tf8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvK-De-Kut">
-                                <rect key="frame" x="41" y="577" width="68" height="30"/>
+                                <rect key="frame" x="366" y="678" width="68" height="30"/>
                                 <state key="normal" title="Clear cart"/>
                                 <connections>
                                     <action selector="clearCart:" destination="Xns-rw-QRo" eventType="touchUpInside" id="qvF-WN-4JD"/>
@@ -370,11 +369,11 @@
             <objects>
                 <viewController id="bZ1-kI-e9h" customClass="HealthySurveyViewController" customModule="CafeApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Gi-eY-wfJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jc4-Z7-1hR">
-                                <rect key="frame" x="16" y="208" width="343" height="123"/>
+                                <rect key="frame" x="20" y="208" width="984" height="123"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="123" id="l2b-vx-YH2"/>
                                 </constraints>
@@ -421,17 +420,17 @@
             <objects>
                 <viewController id="Kqy-tb-4DL" customClass="UnhealthyShoppingCartViewController" customModule="CafeApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zsc-1s-2eC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shopping Cart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHA-41-l1T">
-                                <rect key="frame" x="132" y="82" width="111" height="21"/>
+                                <rect key="frame" x="456.5" y="82" width="111" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3DZ-8e-OJO">
-                                <rect key="frame" x="67" y="165" width="240" height="333"/>
+                                <rect key="frame" x="67" y="165" width="889" height="333"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="333" id="bwa-wD-v3r"/>
@@ -441,21 +440,21 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ios-iL-BFi">
-                                <rect key="frame" x="265" y="575" width="93" height="30"/>
+                                <rect key="frame" x="589.5" y="575" width="93" height="30"/>
                                 <state key="normal" title="Finalize order"/>
                                 <connections>
                                     <segue destination="bph-MS-0QC" kind="show" id="2BE-e8-pEq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLO-Xv-i1P">
-                                <rect key="frame" x="134" y="575" width="106" height="30"/>
+                                <rect key="frame" x="458.5" y="575" width="106" height="30"/>
                                 <state key="normal" title="Return to menu"/>
                                 <connections>
                                     <action selector="returnToMenu:" destination="Kqy-tb-4DL" eventType="touchUpInside" id="ZP1-yS-2XJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0MP-zP-RAF">
-                                <rect key="frame" x="41" y="575" width="68" height="30"/>
+                                <rect key="frame" x="365.5" y="575" width="68" height="30"/>
                                 <state key="normal" title="Clear cart"/>
                                 <connections>
                                     <action selector="clearCartPressed:" destination="Kqy-tb-4DL" eventType="touchUpInside" id="1Jf-BF-dBA"/>
@@ -491,7 +490,7 @@
             <objects>
                 <viewController id="Rc1-Gu-pEc" customClass="SurveyViewController" customModule="CafeApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w63-rK-5B0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FIf-v6-E0R">
@@ -578,7 +577,7 @@
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aQ2-Kr-PRb">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="1024" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -596,7 +595,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c5W-3A-n22" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sjz-7h-9iR">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="1024" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -613,11 +612,11 @@
             <objects>
                 <viewController id="bph-MS-0QC" customClass="UnhealthySurveyViewController" customModule="CafeApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Eff-Sp-wVc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCn-Pb-MPo">
-                                <rect key="frame" x="169" y="556" width="37" height="16"/>
+                                <rect key="frame" x="493.5" y="657" width="37" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="wvD-cy-8L8"/>
                                 </constraints>
@@ -627,14 +626,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVb-Kb-NBM">
-                                <rect key="frame" x="163" y="451" width="48" height="30"/>
+                                <rect key="frame" x="488" y="552" width="48" height="30"/>
                                 <state key="normal" title="Survey"/>
                                 <connections>
                                     <action selector="surveyButtonPressed:" destination="bph-MS-0QC" eventType="touchUpInside" id="Ee8-7D-IBE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjB-KH-fFR">
-                                <rect key="frame" x="16" y="220" width="346" height="133"/>
+                                <rect key="frame" x="20" y="220" width="991" height="133"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="133" id="egi-M8-21e"/>
                                 </constraints>
