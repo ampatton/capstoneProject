@@ -24,6 +24,8 @@ class HealthyShoppingCartViewController: UIViewController, MFMailComposeViewCont
 
         textView.text = healthyShoppingCart.foodsInCart
         textView.isEditable = false
+        
+        navigationItem.hidesBackButton = true // redundant with the "Return to menu" Button so removed
     }
 
     override func didReceiveMemoryWarning() {

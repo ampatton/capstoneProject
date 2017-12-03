@@ -26,6 +26,8 @@ class UnhealthyShoppingCartViewController: UIViewController, MFMailComposeViewCo
         textView.text = unhealthyShoppingCart.foodsInCart
         textView.isEditable = false
         
+        navigationItem.hidesBackButton = true // redundant with the "Return to menu" Button so removed
+        
         // Do any additional setup after loading the view.
     }
 
@@ -70,6 +72,7 @@ class UnhealthyShoppingCartViewController: UIViewController, MFMailComposeViewCo
         let mailComposerVC = MFMailComposeViewController()
         
         mailComposerVC.mailComposeDelegate = self
+        //  mailComposerVC.setEditing(false, animated: true) //possible way to disable the editing. will try to get back to it and figure
         mailComposerVC.setToRecipients(["austinpatton59@gmail.com"])
         mailComposerVC.setSubject("New Order")
         mailComposerVC.setMessageBody(unhealthyShoppingCart.foodsInCart + "Total time spent analyzing:" + unhealthyShoppingCart.timeToOrder.description, isHTML: false)

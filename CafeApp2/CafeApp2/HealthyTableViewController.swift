@@ -66,6 +66,11 @@ class HealthyTableViewController: UITableViewController {
     
     //var dictionaryArray = [[String: AnyObject]]()
     
+    //    let section = ["Soups and Salads", "Sides", "Wraps", "Sandwiches", "Grill"]
+    //creates the sections for the food items
+    //    let foodItems = [[loadSoupsSalads], [loadSides]]
+    //need to figure out how to grab the food items from each section.
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

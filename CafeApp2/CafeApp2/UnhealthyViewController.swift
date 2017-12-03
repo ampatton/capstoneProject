@@ -15,6 +15,10 @@ class UnhealthyViewController: UIViewController {
     @IBOutlet weak var foodNameLabel: UILabel!
     @IBOutlet weak var foodPriceLabel: UILabel!
     
+    //    let section = ["Soups and Salads", "Sides", "Wraps", "Sandwiches", "Grill"]
+    //creates the sections for the food items
+    //    let foodItems = [[loadSoupsSalads], [loadSides]]
+    //need to figure out how to grab the food items from each section.
     
     var testText = "wrong text"//use this if you go back to using a whole text view for all of them instead of labels
     var testFood = "Wrong  food"
