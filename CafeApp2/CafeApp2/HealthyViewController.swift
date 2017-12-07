@@ -28,7 +28,7 @@ class HealthyViewController: UIViewController {
         runTimer()
         
         testTextView?.text = testText
-        self.title = "Menu Item Display"
+        self.title = testFood
         
         // Do any additional setup after loading the view.
     }

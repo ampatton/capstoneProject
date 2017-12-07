@@ -42,7 +42,7 @@ class UnhealthyViewController: UIViewController {
         foodPriceLabel.text = testPrice
         testTextView?.text = testDescription
         
-        self.title = "Menu Item Display"
+        self.title = testFood
         
         // Do any additional setup after loading the view, typically from a nib.
     }

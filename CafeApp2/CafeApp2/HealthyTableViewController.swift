@@ -79,7 +79,7 @@ class HealthyTableViewController: UITableViewController {
             DBConfigured.configuredBool = true
         }
         
-        self.title = "Cafe at Eckles Menu"//self.pop to root navigation controller
+        self.title = "Cafe Eckles Menu"//self.pop to root navigation controller
         
         
         

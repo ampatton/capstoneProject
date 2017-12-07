@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
         <array key="HelveticaNeueLights.ttc">
             <string>HelveticaNeue-Light</string>
         </array>
@@ -50,7 +53,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.92944729329999998" green="0.94111835960000001" blue="0.94510674480000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="YUt-z4-kb5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="1wL-Pl-l0x"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YUt-z4-kb5" secondAttribute="bottom" constant="565" id="2lp-Hk-klT"/>
@@ -79,9 +82,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="WQl-YB-VbA">
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.3201275468" green="0.58783757690000005" blue="0.83535039420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Ws3-fU-yaj">
+                            <rect key="frame" x="0.0" y="116" width="1024" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.3201275468" green="0.58783757690000005" blue="0.83535039420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="healthyMenuChoiceCell" id="n1k-wa-L2L" customClass="healthyMenuCell" customModule="CafeApp2" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n1k-wa-L2L" id="N6m-2q-YFz">
                                     <rect key="frame" x="0.0" y="0.0" width="986" height="43.5"/>
@@ -91,7 +104,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="986" height="44"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                     </subviews>
@@ -178,9 +191,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="mlF-tl-o3P">
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.3201275468" green="0.58783757690000005" blue="0.83535039420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Orz-cF-dPd">
+                            <rect key="frame" x="0.0" y="116" width="1024" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.3201275468" green="0.58783757690000005" blue="0.83535039420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="unhealthyMenuChoiceCell" id="zgA-Jw-9bM" customClass="unhealthyMenuCell" customModule="CafeApp2" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zgA-Jw-9bM" id="y50-Io-TDN">
                                     <rect key="frame" x="0.0" y="0.0" width="986" height="43.5"/>
@@ -190,7 +213,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="986" height="44"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                     </subviews>
