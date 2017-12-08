@@ -38,6 +38,7 @@ class HealthyShoppingCartViewController: UIViewController, MFMailComposeViewCont
     }
     
     
+    
     @IBAction func clearCart(_ sender: Any) {
         textView.text = " "
         healthyShoppingCart.foodsInCart = " "

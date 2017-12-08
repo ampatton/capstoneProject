@@ -45,7 +45,9 @@ class UnhealthyShoppingCartViewController: UIViewController, MFMailComposeViewCo
 
     @IBAction func returnToMenu(_ sender: Any) {
         _ = navigationController?.popToRootViewController(animated: true)
+        //i dont really understand how this works, but it does
     }
+    
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

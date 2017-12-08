@@ -26,7 +26,7 @@ class HealthyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         runTimer()
-        
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 0, green: 0.478431, blue: 1, alpha: 1)//makes sure the color of the buy button stays blue
         testTextView?.text = testText
         self.title = testFood
         
