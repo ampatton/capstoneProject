@@ -12,6 +12,7 @@ class HealthyViewController: UIViewController {
     
     
    // @IBOutlet weak var testTextView: UITextView!
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var testTextView: UITextView!
     @IBOutlet weak var foodNameLabel: UILabel!
     @IBOutlet weak var foodPriceLabel: UILabel!
@@ -35,6 +36,7 @@ class HealthyViewController: UIViewController {
     var testCholesteral = "Wrong Cholesteral"
     var testSodium = "Wrong Sodium"
     var testProtein = "Wrong Protein"
+    var testPic = "blank"
     
     var seconds = 0
     var timer = Timer()
@@ -56,6 +58,35 @@ class HealthyViewController: UIViewController {
         foodProteinLabel?.text = testProtein
         //connecting the label to the content
         
+        let catPictureURL = URL(string: testPic)
+        
+        let session = URLSession(configuration: .default)
+        
+        let downloadPicTask = session.dataTask(with: catPictureURL!) { (data,response, error) in
+            
+            if let e = error {
+                print("Error download")
+            }
+            else{
+                
+                if let res = response as? HTTPURLResponse{
+                    print("downloaded \(res.statusCode)")
+                    if let imageData = data {
+                        
+                        let image = UIImage(data: imageData)
+                        
+                        self.imageView.image = image
+                        
+                    }else {
+                        print("Couldn't get image")
+                    }
+                }else {
+                    print("Couldn't get response code for some reason")
+                }
+            }
+        }
+        
+        downloadPicTask.resume()
         
         // Do any additional setup after loading the view.
     }

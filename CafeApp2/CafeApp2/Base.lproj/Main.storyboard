@@ -253,6 +253,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xpS-41-egU">
+                                <rect key="frame" x="140" y="239" width="475" height="350"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -350,6 +354,7 @@
                         <outlet property="foodPriceLabel" destination="mfA-JV-CcT" id="Bzd-G4-wyI"/>
                         <outlet property="foodProteinLabel" destination="62N-EK-d71" id="Nm2-gK-x5a"/>
                         <outlet property="foodSodiumLabel" destination="E58-R1-TkA" id="tLr-GH-Y69"/>
+                        <outlet property="imageView" destination="xpS-41-egU" id="Vch-nn-dwn"/>
                         <outlet property="testTextView" destination="Dcg-wn-Mac" id="kRj-MY-eEz"/>
                     </connections>
                 </viewController>

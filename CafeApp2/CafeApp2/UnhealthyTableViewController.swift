@@ -104,9 +104,9 @@ class UnhealthyTableViewController: UITableViewController {
             for (key, dict) in snapshot.value as? NSDictionary ?? [:] {
                 let dict = dict as? NSDictionary
                 
-                let calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Double, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int
+                let calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Double, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int, pic = dict!["pic"] as? String
                 
-                items.append(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium! ))
+                items.append(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium!, pic: pic! ))
                 //self.arrayIndex += 1
                 
                 
@@ -131,9 +131,9 @@ class UnhealthyTableViewController: UITableViewController {
             for (key, dict) in snapshot.value as? NSDictionary ?? [:] {
                 let dict = dict as? NSDictionary
                 
-                let calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Double, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int
+                let calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Double, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int, pic = dict!["pic"] as? String
                 
-                items.append(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium! ))
+                items.append(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium!, pic: pic!))
                 //self.arrayIndex += 1
             }
             //let name = snapshot.value!["name"]
@@ -156,9 +156,9 @@ class UnhealthyTableViewController: UITableViewController {
             for (key, dict) in snapshot.value as? NSDictionary ?? [:] {
                 let dict = dict as? NSDictionary
                 
-                let calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Double, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int
+                let calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Double, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int, pic = dict!["pic"] as? String
                 
-                items.append(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium! ))
+                items.append(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium!, pic: pic! ))
                 //self.arrayIndex += 1
             }
             //let name = snapshot.value!["name"]
@@ -181,9 +181,9 @@ class UnhealthyTableViewController: UITableViewController {
             for (key, dict) in snapshot.value as? NSDictionary ?? [:] {
                 let dict = dict as? NSDictionary
                 
-                let calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Double, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int
+                let calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Double, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int, pic = dict!["pic"] as? String
                 
-                items.append(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium! ))
+                items.append(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium!, pic: pic! ))
                 //self.arrayIndex += 1
             }
             //let name = snapshot.value!["name"]
@@ -207,9 +207,9 @@ class UnhealthyTableViewController: UITableViewController {
             for (key, dict) in snapshot.value as? NSDictionary ?? [:] {
                 let dict = dict as? NSDictionary
                 
-                let calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Double, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int
+                let calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Double, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int, pic = dict!["pic"] as? String
                 
-                items.append(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium! ))
+                items.append(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium!, pic: pic! ))
                 //self.arrayIndex += 1
             }
             //let name = snapshot.value!["name"]
@@ -233,9 +233,9 @@ class UnhealthyTableViewController: UITableViewController {
             for (key, dict) in snapshot.value as? NSDictionary ?? [:] {
                 let dict = dict as? NSDictionary
                 
-                let calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Double, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int
+                let calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Double, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int, pic = dict!["pic"] as? String
                 
-                items.append(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium! ))
+                items.append(menuItemStruct(name: name!, calories: calories!, carbohydrate: carbohydrate!, cholesterol: cholesterol!, description: description!, fat: fat!, price: price!, protein: protein!, sodium: sodium!, pic:pic! ))
                 //self.arrayIndex += 1
             }
             //let name = snapshot.value!["name"]
