@@ -11,12 +11,30 @@ import UIKit
 class HealthyViewController: UIViewController {
     
     
+   // @IBOutlet weak var testTextView: UITextView!
     @IBOutlet weak var testTextView: UITextView!
+    @IBOutlet weak var foodNameLabel: UILabel!
+    @IBOutlet weak var foodPriceLabel: UILabel!
+    @IBOutlet weak var foodCalorieLabel: UILabel!
+    @IBOutlet weak var foodCarbLabel: UILabel!
+    @IBOutlet weak var foodFatLabel: UILabel!
+    @IBOutlet weak var foodCholesteralLabel: UILabel!
+    @IBOutlet weak var foodSodiumLabel: UILabel!
+    @IBOutlet weak var foodProteinLabel: UILabel!
+    @IBOutlet weak var testDescriptionLabel: UILabel!
+    
+    //connect these for the healthy menu. going to need to segue to the TVC
     
     var testText = "blank"
     var testFood = "Wrong  food"  // --Uncomment if you need these for text labels instead of one text field--
     var testDescription = "Wrong description"
     var testPrice = "Wrong price"
+    var testCalories = "Wrong Calories"
+    var testCarbohydrates = "Wrong Carbs"
+    var testFats = "Wrong Fats"
+    var testCholesteral = "Wrong Cholesteral"
+    var testSodium = "Wrong Sodium"
+    var testProtein = "Wrong Protein"
     
     var seconds = 0
     var timer = Timer()
@@ -27,8 +45,17 @@ class HealthyViewController: UIViewController {
         super.viewDidLoad()
         runTimer()
         self.navigationController?.navigationBar.tintColor = UIColor(red: 0, green: 0.478431, blue: 1, alpha: 1)//makes sure the color of the buy button stays blue
-        testTextView?.text = testText
-        self.title = testFood
+        testTextView?.text = testDescription
+        foodNameLabel?.text = testFood
+        foodPriceLabel?.text = testPrice
+        foodCalorieLabel?.text = testCalories
+        foodCarbLabel?.text = testCarbohydrates
+        foodFatLabel?.text = testFats
+        foodCholesteralLabel?.text = testCholesteral
+        foodSodiumLabel?.text = testSodium
+        foodProteinLabel?.text = testProtein
+        //connecting the label to the content
+        
         
         // Do any additional setup after loading the view.
     }

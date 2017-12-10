@@ -438,7 +438,13 @@ class HealthyTableViewController: UITableViewController {
         viewController.testFood = menuItems[indexPath!.row].name
         viewController.testDescription = menuItems[indexPath!.row].description
         viewController.testPrice = menuItems[indexPath!.row].price.description
-        
+        viewController.testCalories = menuItems[indexPath!.row].calories.description
+        viewController.testCarbohydrates = menuItems[indexPath!.row].carbohydrate.description
+        viewController.testFats = menuItems[indexPath!.row].fat.description
+        viewController.testCholesteral = menuItems[indexPath!.row].cholesterol.description
+        viewController.testSodium = menuItems[indexPath!.row].sodium.description
+        viewController.testProtein = menuItems[indexPath!.row].protein.description
+        //labels for switch between textbox to label controls
         
         
         // Get the new view controller using segue.destinationViewController.
