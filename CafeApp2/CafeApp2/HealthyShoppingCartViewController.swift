@@ -8,6 +8,9 @@
 
 import UIKit
 import MessageUI
+import Firebase
+import FirebaseDatabase
+
 
 struct healthyShoppingCart{
     static var foodsInCart = " " //this data is in a struct so it will persist when a new view controller is accessed. also, i dont want to make a singleton just for this
@@ -17,6 +20,17 @@ struct healthyShoppingCart{
 class HealthyShoppingCartViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
     @IBOutlet weak var textView: UITextView!
+    
+    @IBAction func finalizeOrder(_ sender: Any) {
+        
+        if(FirebaseApp.app() == nil){
+            FirebaseApp.configure()
+        }
+        
+        let text = textView.text
+        let databaseRef = Database.database().reference()
+        databaseRef.child("Customers").childByAutoId().setValue(text)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class HealthyViewController: UIViewController {
     
@@ -109,7 +110,8 @@ class HealthyViewController: UIViewController {
         
         
         let viewController = segue.destination as! HealthyShoppingCartViewController
-        healthyShoppingCart.foodsInCart.append(testFood + "\n Price " + testPrice + "\n\n")
+        healthyShoppingCart.foodsInCart.append(testFood + "\n Price: " + testPrice + "\n Calories: " + testCalories + " | Carbs: " + testCarbohydrates + " | Protein: " + testProtein + " | Fats: " + testFats + " | Sodium: " + testSodium + " | Cholesterol: " + testCholesteral + "\n")
+        
         healthyShoppingCart.timeToOrder += seconds
         
         //pretty sure you still need a prepareForSegue so you can get the proper time from the timer (need the time when the segue is pressed)
