@@ -68,7 +68,7 @@ class HealthyShoppingCartViewController: UIViewController, MFMailComposeViewCont
         let mailComposerVC = MFMailComposeViewController()
         
         mailComposerVC.mailComposeDelegate = self
-        mailComposerVC.setToRecipients(["austinpatton59@gmail.com"])
+        mailComposerVC.setToRecipients(["leovankim@gmail.com"])
         mailComposerVC.setSubject("New Order")
         mailComposerVC.setMessageBody(healthyShoppingCart.foodsInCart + "Total time spent analyzing:" + unhealthyShoppingCart.timeToOrder.description, isHTML: false)
         //is it posssible to make the messageBody read only?
