@@ -25,9 +25,11 @@ class UnhealthyShoppingCartViewController: UIViewController, MFMailComposeViewCo
             FirebaseApp.configure()
         }
         
+        let timeText = unhealthyShoppingCart.timeToOrder.description
+        
         let text = textView.text
         let databaseRef = Database.database().reference()
-        databaseRef.child("Customers").childByAutoId().setValue(text)
+        databaseRef.child("Customers").childByAutoId().setValue(text! + "Time Spent: " + timeText)
     }
 
     

@@ -110,7 +110,7 @@ class HealthyViewController: UIViewController {
         
         
         let viewController = segue.destination as! HealthyShoppingCartViewController
-        healthyShoppingCart.foodsInCart.append(testFood + "\n Price: " + testPrice + "\n Calories: " + testCalories + " | Carbs: " + testCarbohydrates + " | Protein: " + testProtein + " | Fats: " + testFats + " | Sodium: " + testSodium + " | Cholesterol: " + testCholesteral + "\n")
+        healthyShoppingCart.foodsInCart.append(testFood + "\n Price: " + testPrice + "\n Calories: " + testCalories + " | Carbs: " + testCarbohydrates + " | Protein: " + testProtein + " | Fats: " + testFats + " | Sodium: " + testSodium + " | Cholesterol: " + testCholesteral + "\n\n ")
         
         healthyShoppingCart.timeToOrder += seconds
         
