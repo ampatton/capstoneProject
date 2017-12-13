@@ -85,7 +85,7 @@ class UnhealthyTableViewController: UITableViewController {
             
             print (dict)
             
-            self.menuItems.insert(menuItemStruct(name: name!, price: price!), at: self.arrayIndex)
+            //self.menuItems.insert(menuItemStruct(name: name!, price: price!), at: self.arrayIndex)
             self.arrayIndex += 1
             //self.drinks.insert(drinkStruct(name: name, price: price ), at: 0)
             
