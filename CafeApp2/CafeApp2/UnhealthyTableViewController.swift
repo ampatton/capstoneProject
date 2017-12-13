@@ -36,19 +36,22 @@ class UnhealthyTableViewController: UITableViewController {
         
         self.title = "Cafe Eckles Menu"//self.pop to root navigation controller
         
-        loadSoupsSalads(completionHandler: { items in
+        self.loadDrinks(completionHandler: { items in
             self.menuItems += items
-            self.loadSides(completionHandler: { items in
+            self.loadSoupsSalads(completionHandler: { items in
                 self.menuItems += items
-                self.loadWraps(completionHandler: { items in
+                self.loadSides(completionHandler: { items in
                     self.menuItems += items
-                    self.loadSandwiches(completionHandler: { items in
+                    self.loadWraps(completionHandler: { items in
                         self.menuItems += items
-                        self.loadGrill(completionHandler: { items in
+                        self.loadSandwiches(completionHandler: { items in
                             self.menuItems += items
-                            self.loadOther(completionHandler: { items in
+                            self.loadGrill(completionHandler: { items in
                                 self.menuItems += items
-                                self.tableView.reloadData()
+                                self.loadOther(completionHandler: { items in
+                                    self.menuItems += items
+                                    self.tableView.reloadData()
+                                })
                             })
                         })
                     })
@@ -74,24 +77,34 @@ class UnhealthyTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    func loadDrinks () {//<--------------------Once the database is fixed, take out coffee so it reads the drinks category
+    func loadDrinks (completionHandler: @escaping ([menuItemStruct]) -> Void){//<--------------------Once the database is fixed, take out coffee so it reads the drinks category
         ref = Database.database().reference()
         
-        ref?.child("menu_items").child("Drinks").child("coffee").observeSingleEvent(of: .value, with: {(snapshot) in//takes a snapshot of the items within the database structure of menu_items - > Drinks -> what its taking a snapshot of
+        var items: [menuItemStruct] = []
+        
+        ref?.child("menu_items").child("Drinks").observeSingleEvent(of: .value, with: {(snapshot) in
             print (snapshot)
+            
+            for (key, dict) in snapshot.value as? NSDictionary ?? [:] {
+                let dict = dict as? NSDictionary
+                
+                let calories = dict!["calories"] as? Int, carbohydrate = dict!["carbohydrate"] as? Int, cholesterol = dict!["cholesterol"] as? Int, description = dict!["description"] as? String, fat = dict!["fat"] as? Int, name = dict!["name"] as? String, price = dict!["price"] as? Double, protein = dict!["protein"] as? Int, sodium = dict!["sodium"] as? Int, pic = dict?["pic"] as? String
+                
+                
+                items.append(menuItemStruct(name: name!, price: price!, pic: pic!))//snapshot will read in calories and the other values that arent included in this one as nil since they're not in the database. That's why there's another initializer which is specifically only for drinks since it only initializes name, price, and pic while everything else is set to zero or " "
+                //self.arrayIndex += 1
+                
+                
+            }
             //let name = snapshot.value!["name"]
-            let dict = snapshot.value as? NSDictionary, name = dict!["name"] as? String, price = dict!["price"] as? Double
             
+            completionHandler(items)
             
-            print (dict)
-            
-            //self.menuItems.insert(menuItemStruct(name: name!, price: price!), at: self.arrayIndex)
-            self.arrayIndex += 1
-            //self.drinks.insert(drinkStruct(name: name, price: price ), at: 0)
-            
+            print("------------------------------------------------------")
             self.tableView.reloadData()
         })
     }
+        
     
     func loadSandwiches(completionHandler: @escaping ([menuItemStruct]) -> Void){//ALL OF THE MENU ITEMS HAVE THE SAME LOADING FUNCTIONS MINUS DRINKS (they just access a different child dictionary) WHICH IS WHY EACH DICTIONARY HAS TO HAVE ITS OWN FUNCTION
         ref = Database.database().reference()

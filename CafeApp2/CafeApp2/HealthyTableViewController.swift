@@ -167,7 +167,7 @@ class HealthyTableViewController: UITableViewController {
         
         var items: [menuItemStruct] = []
         
-        ref?.child("menu_items").child("Drinks").child("Soda").observeSingleEvent(of: .value, with: {(snapshot) in
+        ref?.child("menu_items").child("Drinks").observeSingleEvent(of: .value, with: {(snapshot) in
             print (snapshot)
             
             for (key, dict) in snapshot.value as? NSDictionary ?? [:] {
